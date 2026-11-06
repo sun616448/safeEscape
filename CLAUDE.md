@@ -20,17 +20,45 @@ Therefore:
 ## Layer 1 — Decoy maze game
 - An original, simple maze game (swipe/arrow-key movement, levels of increasing size).
   It must be genuinely playable so it holds up to inspection.
-- Has a **Profile** screen (avatar, levels completed, stats) containing an ordinary-looking
-  **"Player code"** field (styled like a friend/sync code).
-- **First launch:** an in-game "Create your profile" step asks for a *player code* (real
-  passcode) and a *backup code* (panic code), worded like normal game account setup.
-- Entering a code in the Profile field:
-  - **Real passcode** → unlock Layer 2.
-  - **Panic code** → silently wipe all saved data (encrypted plan, situation, codes) and keep
-    showing the game as if nothing happened (show a generic "Invalid code" message).
-  - Anything else → "Invalid code".
+- Tabs: **Play** (the maze), **Rewards** (coin balance, rewards history, and an ordinary-looking
+  **"Redeem a code"** promo-code field), **Profile** (avatar, levels completed, stats).
+  Coins come from first-time level clears and from redeemed codes, so the balance looks normal.
+- **Two codes, one name each, used the same way everywhere** (setup, hidden layer, advocate
+  materials):
+  - **My code** (real passcode) opens her private space.
+  - **Clear code** (panic code) erases it. Not "backup code": in most apps that means "use if you
+    forget your password", so she could wipe her own plan trying to get back in.
+- **Invite code** (`INVITE_CODE` in `lib/crypto.ts`, currently `NEWPATH`): public, handed out by
+  advocates, hotlines, or a support site. On a fresh install the app is only a game; redeeming the
+  invite code opens setup. It only works while no codes exist on the device (so it can't be used
+  to overwrite her codes), and works again after a Clear code wipe so she can start over.
+- **Setup** (`components/game/Setup.tsx`), opened by the invite code. Clarity over obfuscation:
+  she must understand what the codes do; it's shown once, while she holds the phone.
+  1. Plain intro: two codes, both go in Rewards → Redeem a code; what each does.
+  2. Choose My code, then Clear code (typed twice; ≥4 characters; not equal to each other or the
+     invite code; case and spaces ignored).
+  3. Practice the Clear code in a mock redeem box. Nothing is saved, so nothing is erased, and
+     she sees exactly what an onlooker would see.
+  4. "Go to Rewards and redeem My code" → first real unlock.
+- Entering a code in the Redeem field (contract: `CodeResult` in `lib/types.ts`):
+  - **My code** → unlock Layer 2.
+  - **Clear code** → silently wipe all saved data (encrypted plan, situation, codes) and show a
+    normal success: "Code redeemed! +200 coins", added to the rewards history. It must look like
+    the code *worked*: an error here would make it look like she lied about what it was for.
+  - **Invite code** with no codes set up → setup.
+  - Anything else → "This code has expired or was already used." (never "Invalid code").
+- The tab bar stays visible during setup; tapping Play leaves setup instantly.
+- Rewards are free promo rewards on purpose, never "add funds" or payments: money is a common
+  control point in abusive relationships, and a spending screen invites scrutiny.
+- Game progress (`pf_progress`: levels, times, coins, rewards history) is not sensitive and is
+  **not** wiped by the panic code, since a game reset to level 1 would be noticeable. It never
+  stores any code that was typed.
 
 ## Layer 2 — Hidden planning tool
+- **How this works** (`components/hidden/HowItWorks.tsx`): shown on the first unlock (nothing
+  saved yet) and any time from a link. This is where plain, explicit language lives: what the
+  app is, that data is encrypted on the phone, what My code / Clear code do, how to leave fast,
+  911 and the hotline. Keep it in sync with setup wording.
 - A free-text box: "Tell me what's going on" (natural language, any detail level).
 - Optional quick fields: county (SF, Alameda, Contra Costa, San Mateo, Santa Clara, Marin,
   Solano, Napa, Sonoma), kids/pets, whether she's in danger right now.
@@ -54,11 +82,20 @@ Both modes include matched Bay Area resources (from the curated list only) and a
 
 ## Storage & crypto (client-side)
 - No accounts, no server database.
-- Passcode → key via **PBKDF2 (WebCrypto, SHA-256, ≥200k iterations, random salt)** →
-  **AES-GCM** encrypts `{situation, plan, checklistState}`; blob stored in IndexedDB/localStorage
-  under a neutral key name (e.g. `pf_save`).
-- Passcode verification = successful decryption of the blob/canary (don't store the passcode).
-- Panic code stored only as a salted hash; matching it deletes every app key from storage.
+- Implemented in `lib/crypto.ts`: `createCodes`, `checkCode`, `saveState`, `wipeHiddenData`.
+- **Dev shortcut:** under `npm run dev` only, redeeming `DEV` opens the hidden layer (Clear code
+  `DEVCLEAR`), creating those codes if needed. It replaces any other codes in that browser. It is
+  stripped from `next build`, so it never works on Vercel or a phone; use the invite flow there.
+- My code → key via **PBKDF2 (WebCrypto, SHA-256, 250k iterations, random salt)** →
+  **AES-GCM** encrypts `SavedState`; stored in localStorage as `pf_save`.
+- My code verification = successful decryption (the code itself is never stored).
+- Clear code stored only as a salted PBKDF2 hash (`pf_cfg`); matching it deletes every
+  hidden-layer key (`pf_save`, `pf_cfg`) but keeps `pf_progress`, the ordinary game progress.
+  Both derivations always run, so a wrong code and the Clear code take the same time.
+- Codes are case-insensitive and ignore spaces, like promo codes.
+- Unlocking returns a `Session` (`{key, salt, state}`); the hidden layer saves with
+  `saveState(session, state)`. The key is non-extractable and lives only in React state; exiting
+  drops it.
 - Wrap all storage access in try/catch; app must work if storage is unavailable.
 
 ## Claude API
@@ -96,9 +133,11 @@ Both modes include matched Bay Area resources (from the curated list only) and a
 ```
 app/page.tsx              single route; switches between Game and Hidden layers via state
 app/api/plan/route.ts     Claude call
-components/game/          Maze, Profile (player-code field), Setup
-components/hidden/        SituationForm, PlanView, QuickExit
-lib/crypto.ts             PBKDF2 + AES-GCM helpers, panic wipe
+components/game/          GameShell (tabs), Maze, Rewards (redeem-code field), Profile, Setup
+lib/maze.ts               maze generation + movement (seeded per level)
+lib/gameProgress.ts       non-sensitive game progress store (pf_progress)
+components/hidden/        HowItWorks, SituationForm, PlanView, QuickExit
+lib/crypto.ts             codes, invite code, PBKDF2 + AES-GCM, Clear-code wipe
 lib/quickExit.ts          Esc + shake listeners
 data/resources.bay-area.json
 ```
@@ -135,7 +174,10 @@ git push -u origin feat/<thing>         # open PR, partner skims, merge
 Accounts, multi-device sync, regions outside the Bay Area, chat history, push notifications.
 
 ## Known prototype limitations (be honest about these)
-- Setup on first launch: if the abuser opens it first, they could set the codes.
+- Setup needs the invite code, so opening the app first shows only a game. But the invite code
+  is public: an abuser who knows about Path Finder could redeem it and set the codes first.
+- Setup and the How-this-works screen use plain words on purpose; someone who sees setup
+  over her shoulder may understand it. It's shown once, and the tab bar leaves it instantly.
 - A determined person with device access could inspect storage and see that encrypted data exists.
 - Claude output can be wrong; the plan always surfaces 911 and the hotline.
 - Before real-user use: review by DV advocates, security review, accessibility pass.
