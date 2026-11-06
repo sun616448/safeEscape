@@ -1,0 +1,63 @@
+{
+  "_meta": {
+    "version": "0.2",
+    "scope": "San Francisco, San Mateo, Santa Clara",
+    "note": "General safety-planning structure, NOT legal advice; review with a local DV advocate before launch. Themes follow the National DV Hotline safety-planning guide (https://www.thehotline.org/plan-for-safety/), which was not independently fetched.",
+    "how_to_use": "Each step has home_actions (quiet things that can be done while the partner is nearby) and away_actions (things that need privacy). The app resolves resource_filters against resources.json using the user's county, urgency, constraints and channels (see match.py).",
+    "device_caution": "Quiet channels can still leave traces (browser history, message threads, notifications, shared accounts). Prefer a safer device (library, work, friend) and delete threads where safe. Text 911 is a last resort when you cannot speak."
+  },
+  "situation_inputs": {
+    "county": ["San Francisco", "San Mateo", "Santa Clara"],
+    "urgency": ["immediate", "planning"],
+    "partner_present": [true, false],
+    "has_children": [true, false],
+    "has_pets": [true, false],
+    "immigration_concern": [true, false],
+    "need": ["restraining_order", "custody", "immigration", "money", "pets", "address_confidentiality", "tech_safety"]
+  },
+  "phases": [
+    {
+      "id": "immediate",
+      "title": "I need to be safe now",
+      "urgency": "immediate",
+      "steps": [
+        {"id": "danger", "title": "If you are in danger", "home_actions": ["Text 911 if you cannot speak (call if you can)."], "away_actions": ["Call 911."], "resource_filters": [{"category": "emergency"}]},
+        {"id": "talk-now", "title": "Reach an advocate", "home_actions": ["Chat or text: National DV Hotline (chat at thehotline.org, text START to 88788); La Casa de las Madres text line (SF); SafeChat Silicon Valley (Santa Clara)."], "away_actions": ["Call a 24-hour hotline; ask for shelter, safety planning and transportation help."], "resource_filters": [{"category": "hotline"}]},
+        {"id": "shelter", "title": "Emergency shelter", "home_actions": ["Not usually possible quietly; save the hotline number to reach when you can speak."], "away_actions": ["Call the 24-hour line. Shelter locations are confidential. Tell them if you have children or pets, and ask about eligibility."], "resource_filters": [{"category": "shelter"}, {"category": "housing"}]},
+        {"id": "pets-now", "title": "Pets", "home_actions": [], "away_actions": ["San Mateo County: ask CORA about the Safe Pets Program (up to 30 days, free, CORA referral). SF and Santa Clara: no verified program found; ask the advocate."], "resource_filters": [{"category": "pets"}]},
+        {"id": "ride", "title": "Getting there safely", "home_actions": [], "away_actions": ["Ask the advocate or shelter intake about transportation. No published, verified ride program found in these counties yet."], "resource_filters": []}
+      ]
+    },
+    {
+      "id": "planning-safety",
+      "title": "I am planning to leave",
+      "urgency": "planning",
+      "steps": [
+        {"id": "plan-with-advocate", "title": "Make a plan with an advocate", "home_actions": ["Chat/text an advocate; read the hotline's safety-planning guide on a safer device."], "away_actions": ["Call a hotline; consider a Family Justice Center visit (Santa Clara: AACI FJC Thursdays; Sunnyvale FJC; San Mateo FJC status unconfirmed)."], "resource_filters": [{"category": "hotline"}, {"category": "family_justice_center"}]},
+        {"id": "tech-safety", "title": "Secure your phone and accounts", "home_actions": ["Read NNEDV Safety Net guidance on a safer device; do not change settings that would alert the partner."], "away_actions": ["Change passwords and review location sharing from a device the partner has never accessed."], "resource_filters": [{"category": "tech_safety"}]},
+        {"id": "address", "title": "Keep your new address confidential", "home_actions": ["Read about California Safe at Home."], "away_actions": ["Book an enrolling-agency appointment."], "resource_filters": [{"category": "state_program"}]},
+        {"id": "documents", "title": "Gather documents and essentials", "home_actions": ["Make a list in your head or on a safer device."], "away_actions": ["Collect ID, immigration papers, medications, cash, keys; store copies with someone you trust or ask an advocate what is safe to take."], "resource_filters": []},
+        {"id": "waitlists", "title": "Get on shelter and housing waitlists early", "home_actions": [], "away_actions": ["SF: coordinated-entry access points for survivors (Asian Women's Shelter by phone; SafeHouse and Riley Center in person)."], "resource_filters": [{"category": "shelter"}, {"category": "housing"}]}
+      ]
+    },
+    {
+      "id": "legal",
+      "title": "Legal protection",
+      "urgency": "planning",
+      "steps": [
+        {"id": "dvro", "title": "Restraining order (DVRO)", "home_actions": ["San Mateo: Family Law Facilitator LiveChat and Guide and File online forms. Santa Clara: court live chat/email via scscourt.org."], "away_actions": ["Call or visit court self-help or legal aid (SF: CROC, Open Door Legal, JDC, Bay Area Legal Aid; Santa Clara: Restraining Order Help Center, Pro Bono Project; San Mateo: Bay Area Legal Aid)."], "resource_filters": [{"category": "court_help"}, {"category": "legal", "topic": "restraining_order"}]},
+        {"id": "custody", "title": "Custody and visitation", "home_actions": [], "away_actions": ["Ask legal aid; Family Justice Center attorneys in Santa Clara (AACI, Thursdays)."], "resource_filters": [{"category": "legal", "topic": "custody"}]},
+        {"id": "immigration", "title": "If immigration status is a worry", "home_actions": ["Read provider pages; no call needed."], "away_actions": ["Call a provider that lists VAWA / U-visa help (e.g., Bay Area Legal Aid San Mateo for DV survivors; CARECEN SF; Catholic Charities; CLSEPA; Immigration Services of Mountain View; AACI FJC). Several shelters state no citizenship requirement; confirm when you call."], "resource_filters": [{"category": "legal", "topic": "immigration"}]},
+        {"id": "victim-services", "title": "Court support and victim services", "home_actions": ["San Francisco: submit the Mayor's Office for Victims' Rights online form and say when it is safe to call."], "away_actions": ["San Mateo Victim Services (650-599-7479, open to all regardless of immigration status); Santa Clara Victim Services Unit."], "resource_filters": [{"category": "victim_services"}]}
+      ]
+    },
+    {
+      "id": "recovery",
+      "title": "Money and recovery",
+      "urgency": "planning",
+      "steps": [
+        {"id": "calvcb", "title": "Apply to CalVCB", "home_actions": ["Start the online application; no police report needed. Keep paperwork where it will not be found."], "away_actions": ["Call 1-800-777-9229 or ask an advocate to help apply."], "resource_filters": [{"category": "financial"}]}
+      ]
+    }
+  ]
+}
