@@ -1,0 +1,4243 @@
+[
+  {
+    "id": "ndvh",
+    "name": "National Domestic Violence Hotline",
+    "category": "hotline",
+    "counties": [
+      "Alameda",
+      "Contra Costa",
+      "Marin",
+      "Napa",
+      "San Francisco",
+      "San Mateo",
+      "Santa Clara",
+      "Solano",
+      "Sonoma"
+    ],
+    "phone_24h": "1-800-799-7233",
+    "phone_office": null,
+    "text": "Text START to 88788",
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": "https://www.thehotline.org/",
+    "services": "24/7 phone, chat and text with advocates; safety planning; referrals",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://nnedv.org/content/technology-safety/",
+    "verified_on": "2026-11-06",
+    "notes": "Cited by Alameda, SF, Santa Clara county pages.",
+    "focus": true,
+    "channels": [
+      "voice",
+      "text",
+      "chat"
+    ],
+    "channel_notes": "Chat at thehotline.org; text START to 88788.",
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want anonymous support or are not sure where to start. Works while a partner is nearby if you use chat or text.",
+    "topics": [
+      "safety_planning"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [
+        "text",
+        "chat"
+      ],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": true,
+    "verification_flag": null
+  },
+  {
+    "id": "calvcb",
+    "name": "CalVCB (California Victim Compensation Board)",
+    "category": "financial",
+    "counties": [
+      "Alameda",
+      "Contra Costa",
+      "Marin",
+      "Napa",
+      "San Francisco",
+      "San Mateo",
+      "Santa Clara",
+      "Solano",
+      "Sonoma"
+    ],
+    "phone_24h": null,
+    "phone_office": "1-800-777-9229",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": "https://victims.ca.gov/",
+    "services": "Pays crime-related costs not covered elsewhere: relocation, mental health, medical, dental, home security.",
+    "access_note": "Apply online (EN/ES) or by paper; an advocate can help via victims.ca.gov/get-help. Relay: 711.",
+    "confidence": "official",
+    "source_url": "https://victims.ca.gov/uploads/DVAM_Fact-Sheet_2026.pdf",
+    "verified_on": "2026-11-06",
+    "notes": "No police report required: DV program letter, medical/mental-health records or a restraining order can be used. Fact sheet does not name transportation or emergency housing explicitly; confirm with CalVCB.",
+    "focus": true,
+    "channels": [
+      "web_form",
+      "voice"
+    ],
+    "channel_notes": "Apply online (English/Spanish); no police report needed.",
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want help paying for relocation, counseling or medical costs. Application can be started while partner is home, but keep any paperwork where it can't be found.",
+    "topics": [
+      "money"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [
+        "web_form"
+      ],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": true,
+    "verification_flag": null
+  },
+  {
+    "id": "safe-at-home",
+    "name": "California Safe at Home (Secretary of State)",
+    "category": "state_program",
+    "counties": [
+      "Alameda",
+      "Contra Costa",
+      "Marin",
+      "Napa",
+      "San Francisco",
+      "San Mateo",
+      "Santa Clara",
+      "Solano",
+      "Sonoma"
+    ],
+    "phone_24h": null,
+    "phone_office": "1-877-322-5227",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": "https://www.sos.ca.gov/safeathome",
+    "services": "Substitute mailing address accepted by state/county/city agencies; confidential voter registration.",
+    "access_note": "Enroll by appointment with a designated Enrolling Agency (look-up on the SOS site). Email SafeAtHome@sos.ca.gov. Also (916) 653-6814.",
+    "confidence": "official",
+    "source_url": "https://www.sos.ca.gov/safeathome",
+    "verified_on": "2026-11-06",
+    "notes": "Duration/renewal terms not stated on the page; confirm with program.",
+    "focus": true,
+    "channels": [
+      "in_person",
+      "voice",
+      "email"
+    ],
+    "channel_notes": "Requires an appointment with an enrolling agency.",
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want your new address kept confidential.",
+    "topics": [
+      "address_confidentiality"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [
+        "email"
+      ],
+      "partner_away": [
+        "in_person",
+        "voice"
+      ]
+    },
+    "partner_home_ok": true,
+    "verification_flag": null
+  },
+  {
+    "id": "safety-net",
+    "name": "NNEDV Safety Net (technology safety)",
+    "category": "tech_safety",
+    "counties": [
+      "Alameda",
+      "Contra Costa",
+      "Marin",
+      "Napa",
+      "San Francisco",
+      "San Mateo",
+      "Santa Clara",
+      "Solano",
+      "Sonoma"
+    ],
+    "phone_24h": null,
+    "phone_office": null,
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": "https://www.techsafety.org/",
+    "services": "Guidance on stalkerware, location tracking, account security, evidence documentation.",
+    "access_note": "Page advises clearing browser history after visiting if your device is monitored.",
+    "confidence": "official",
+    "source_url": "https://nnedv.org/content/technology-safety/",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "web_info"
+    ],
+    "channel_notes": "Read on a safer device. Clear browser history afterward.",
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You think your phone or accounts are being monitored.",
+    "topics": [
+      "tech_safety"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [
+        "web_info"
+      ],
+      "partner_away": []
+    },
+    "partner_home_ok": true,
+    "verification_flag": null
+  },
+  {
+    "id": "fvlc",
+    "name": "Family Violence Law Center (Mobile Response Team)",
+    "category": "hotline",
+    "counties": [
+      "Alameda"
+    ],
+    "phone_24h": "1-800-947-8301",
+    "phone_office": "(510) 208-0220",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": "Interpreter available",
+    "website": "https://fvlc.org/",
+    "services": "24-hr crisis line, safety planning, emergency relocation to confidential location, restraining-order help, court accompaniment.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://socialservices.alamedacountyca.gov/ex/our-services/Abuse-and-Protection/Other-Support/Domestic-violence",
+    "verified_on": "2026-11-06",
+    "notes": "County page also lists MRT direct line (510) 757-5123. Office number (510) 208-0220 confirmed on Alameda court flyer.",
+    "focus": false,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "acfjc",
+    "name": "Alameda County Family Justice Center",
+    "category": "family_justice_center",
+    "counties": [
+      "Alameda"
+    ],
+    "phone_24h": null,
+    "phone_office": "(510) 267-8800",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": "https://acfjc.org/",
+    "services": "Multi-agency services: DV, stalking, sexual assault, trafficking, abuse; counseling; restraining-order help.",
+    "access_note": "info@acfjc.org",
+    "confidence": "official",
+    "source_url": "https://www.alameda.courts.ca.gov/system/files/general/self-help-flyer-rev11025.pdf",
+    "verified_on": "2026-11-06",
+    "notes": "Street address and hours NOT captured (acfjc.org blocked by fetch allowlist). Verify before publishing.",
+    "focus": false,
+    "channels": [
+      "voice",
+      "in_person"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want several services (advocate, legal, police/DA) in one place.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice",
+        "in_person"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "save",
+    "name": "SAVE - Safe Alternatives to Violent Environments",
+    "category": "hotline",
+    "counties": [
+      "Alameda"
+    ],
+    "phone_24h": "(510) 794-6055",
+    "phone_office": "(510) 574-2250",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": "https://save-dv.org/",
+    "services": "IPV hotline, emergency shelter, restraining-order help, counseling (Fremont).",
+    "access_note": null,
+    "confidence": "aggregator",
+    "source_url": "https://www.womenslaw.org/find-help/ca/advocates-and-shelters/local-programs/all",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": false,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": "unverified"
+  },
+  {
+    "id": "building-futures",
+    "name": "Building Futures",
+    "category": "hotline",
+    "counties": [
+      "Alameda"
+    ],
+    "phone_24h": "(866) 292-9688",
+    "phone_office": "(510) 357-0205",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": "https://bfwc.org/",
+    "services": "DV hotline (866-A-WAY-OUT), confidential shelter, counseling, housing for homeless survivors (San Leandro).",
+    "access_note": null,
+    "confidence": "aggregator",
+    "source_url": "https://www.womenslaw.org/find-help/ca/advocates-and-shelters/local-programs/all",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": false,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": "unverified"
+  },
+  {
+    "id": "a-safe-place",
+    "name": "A Safe Place",
+    "category": "hotline",
+    "counties": [
+      "Alameda"
+    ],
+    "phone_24h": "(510) 536-7233",
+    "phone_office": "(510) 986-8600",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": "https://www.asafeplace.org/",
+    "services": "DV hotline, shelter, counseling, children's programs, legal help (Oakland).",
+    "access_note": null,
+    "confidence": "aggregator",
+    "source_url": "https://www.womenslaw.org/find-help/ca/advocates-and-shelters/local-programs/all",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": false,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": "unverified"
+  },
+  {
+    "id": "tri-valley-haven",
+    "name": "Tri-Valley Haven",
+    "category": "hotline",
+    "counties": [
+      "Alameda"
+    ],
+    "phone_24h": "(925) 449-5842",
+    "phone_office": "(925) 449-5845",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": "https://trivalleyhaven.org/",
+    "services": "DV/sexual assault hotline, shelter, counseling, food pantry (Livermore). Toll-free (800) 884-8119.",
+    "access_note": null,
+    "confidence": "aggregator",
+    "source_url": "https://www.womenslaw.org/find-help/ca/advocates-and-shelters/local-programs/all",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": false,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": "unverified"
+  },
+  {
+    "id": "restorative-pathways",
+    "name": "Restorative Pathways",
+    "category": "hotline",
+    "counties": [
+      "Alameda"
+    ],
+    "phone_24h": "(888) 339-7233",
+    "phone_office": "(510) 581-5626",
+    "text": "Youth text line (510) 214-6331",
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": "https://restorativepathways.org/",
+    "services": "DV and trafficking services, trauma mental health, housing, shelters (Castro Valley).",
+    "access_note": null,
+    "confidence": "aggregator",
+    "source_url": "https://www.womenslaw.org/find-help/ca/advocates-and-shelters/local-programs/all",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": false,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": "unverified"
+  },
+  {
+    "id": "narika",
+    "name": "Narika (South Asian community)",
+    "category": "culturally_specific",
+    "counties": [
+      "Alameda"
+    ],
+    "phone_24h": null,
+    "phone_office": "(800) 215-7308",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": "https://www.narika.org/",
+    "services": "Culturally specific DV services, transitional housing, multilingual support groups.",
+    "access_note": null,
+    "confidence": "aggregator",
+    "source_url": "https://www.womenslaw.org/find-help/ca/advocates-and-shelters/local-programs/all",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": false,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want an agency that fits your community or language.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": "unverified"
+  },
+  {
+    "id": "deafhope",
+    "name": "DeafHope",
+    "category": "culturally_specific",
+    "counties": [
+      "Alameda",
+      "Contra Costa"
+    ],
+    "phone_24h": null,
+    "phone_office": "(510) 267-8800 (voice); (510) 735-8553 (VP)",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": "http://www.deaf-hope.org/",
+    "services": "Advocacy for Deaf survivors of DV and sexual violence; peer counseling.",
+    "access_note": null,
+    "confidence": "aggregator",
+    "source_url": "https://www.womenslaw.org/find-help/ca/advocates-and-shelters/local-programs/all",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": false,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want an agency that fits your community or language.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": "unverified"
+  },
+  {
+    "id": "bala-alameda",
+    "name": "Bay Area Legal Aid - Oakland",
+    "category": "legal",
+    "counties": [
+      "Alameda"
+    ],
+    "phone_24h": null,
+    "phone_office": "(800) 551-5554",
+    "text": null,
+    "address": "1735 Telegraph Ave, Oakland, CA 94612",
+    "hours": null,
+    "languages": null,
+    "website": "https://baylegal.org/",
+    "services": "Free legal help with domestic violence restraining orders (income-eligible).",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.alameda.courts.ca.gov/system/files/general/self-help-flyer-rev11025.pdf",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": false,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want a restraining order, custody help or immigration relief.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "alameda-court-selfhelp",
+    "name": "Alameda Superior Court Self-Help Center",
+    "category": "court_help",
+    "counties": [
+      "Alameda"
+    ],
+    "phone_24h": null,
+    "phone_office": "(510) 272-1393",
+    "text": null,
+    "address": null,
+    "hours": "Phone Mon-Thu 2-4 pm (messages only; callbacks within 5 business days). Live chat Mon-Thu 9 am-12 pm.",
+    "languages": null,
+    "website": "https://www.alameda.courts.ca.gov/self-help",
+    "services": "Help with DV, civil harassment, elder abuse restraining orders. Appointments by Zoom/phone/in person.",
+    "access_note": "No walk-ins. Screening via LiveChat or phone.",
+    "confidence": "official",
+    "source_url": "https://www.alameda.courts.ca.gov/system/files/general/self-help-flyer-rev11025.pdf",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": false,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You are filing or responding to a restraining order.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "alameda-da-vw",
+    "name": "Alameda County DA Victim-Witness (Main Office)",
+    "category": "victim_services",
+    "counties": [
+      "Alameda"
+    ],
+    "phone_24h": null,
+    "phone_office": "(510) 272-6180",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": "https://da.alamedacountyca.gov/victim-witness/",
+    "services": "Crisis intervention, emergency aid, court accompaniment. East County (Dublin): (925) 803-7171.",
+    "access_note": null,
+    "confidence": "aggregator",
+    "source_url": "https://www.womenslaw.org/find-help/ca/advocates-and-shelters/local-programs/all",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": false,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want help with court, emergency aid or compensation.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": "unverified"
+  },
+  {
+    "id": "alameda-housing",
+    "name": "Alameda County emergency shelter / hotel vouchers (SSA + 211)",
+    "category": "housing",
+    "counties": [
+      "Alameda"
+    ],
+    "phone_24h": null,
+    "phone_office": "211",
+    "text": "Text your ZIP to 898211",
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "Social worker at SSA office or Housing Resource Center can connect to shelter or hotel voucher. Bay Area Helpline 1-800-273-6222.",
+    "access_note": "Fleeing DV qualifies as homeless for county purposes.",
+    "confidence": "official",
+    "source_url": "https://socialservices.alamedacountyca.gov/our-services/Shelter-and-Housing/Other-Support/emergency-shelters",
+    "verified_on": "2026-11-06",
+    "notes": "Hotel voucher eligibility criteria not published on page.",
+    "focus": false,
+    "channels": [
+      "voice",
+      "in_person"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning",
+      "immediate"
+    ],
+    "when_to_use": "You need shelter or longer-term housing after leaving.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice",
+        "in_person"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "stand",
+    "name": "STAND! For Families Free of Violence",
+    "category": "hotline",
+    "counties": [
+      "Contra Costa"
+    ],
+    "phone_24h": "888-215-5555",
+    "phone_office": "(925) 676-2845",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": "https://www.standffov.org/",
+    "services": "DV/child abuse hotline, safety planning, case management, legal advocacy, children's counseling. Offices Concord, Antioch, Richmond.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.contracosta.ca.gov/10029/Victims-Rights-Resources",
+    "verified_on": "2026-11-06",
+    "notes": "Office number from womenslaw.org (aggregator).",
+    "focus": false,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "cvs",
+    "name": "Community Violence Solutions (sexual assault + family violence)",
+    "category": "hotline",
+    "counties": [
+      "Contra Costa",
+      "Marin"
+    ],
+    "phone_24h": "800-670-7273",
+    "phone_office": null,
+    "text": "Text CVS to 20121 (Contra Costa)",
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": "https://cvsolutions.org/",
+    "services": "Sexual assault hotline, rape crisis center, hospital and legal accompaniment, child victim services.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.contracosta.ca.gov/10029/Victims-Rights-Resources",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": false,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "cc-fjc",
+    "name": "Contra Costa Family Justice Centers",
+    "category": "family_justice_center",
+    "counties": [
+      "Contra Costa"
+    ],
+    "phone_24h": null,
+    "phone_office": "Antioch 925-281-0970; Concord 925-521-6366; Danville 925-486-0100; Richmond 510-965-4949",
+    "text": null,
+    "address": null,
+    "hours": "Mon-Fri 9 am-5 pm",
+    "languages": null,
+    "website": "https://www.cocofamilyjustice.org/",
+    "services": "DV, sexual assault, elder abuse, human trafficking support.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.contracosta.ca.gov/10029/Victims-Rights-Resources",
+    "verified_on": "2026-11-06",
+    "notes": "Street addresses not on county page; get from cocofamilyjustice.org.",
+    "focus": false,
+    "channels": [
+      "voice",
+      "in_person"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want several services (advocate, legal, police/DA) in one place.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice",
+        "in_person"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "cc-da-vw",
+    "name": "Contra Costa DA Victim-Witness Assistance",
+    "category": "victim_services",
+    "counties": [
+      "Contra Costa"
+    ],
+    "phone_24h": null,
+    "phone_office": "925-957-8650",
+    "text": null,
+    "address": null,
+    "hours": "Mon-Fri 9 am-5 pm",
+    "languages": null,
+    "website": null,
+    "services": null,
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.contracosta.ca.gov/10029/Victims-Rights-Resources",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": false,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want help with court, emergency aid or compensation.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "bala-cc-dvro",
+    "name": "Bay Area Legal Aid - Contra Costa DVRO Clinic",
+    "category": "legal",
+    "counties": [
+      "Contra Costa"
+    ],
+    "phone_24h": null,
+    "phone_office": "(800) 551-5554",
+    "text": null,
+    "address": null,
+    "hours": "Held remotely by phone on Tuesdays (a Nov 10, 2026 session was listed 9:30 am-1:00 pm; confirm times)",
+    "languages": null,
+    "website": "https://baylegal.org/resources/domestic-violence-restraining-order-clinics/",
+    "services": "Free DVRO clinic. Admin office (510) 663-4755. Relay 711.",
+    "access_note": "Sign-up method not described on page - call the advice line.",
+    "confidence": "official",
+    "source_url": "https://baylegal.org/resources/domestic-violence-restraining-order-clinics/",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": false,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want a restraining order, custody help or immigration relief.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "sf-aws",
+    "name": "Asian Women's Shelter",
+    "category": "shelter",
+    "counties": [
+      "San Francisco"
+    ],
+    "phone_24h": "1-877-751-0880",
+    "phone_office": "415-751-7110",
+    "text": null,
+    "address": "Office: 3543 18th St #19, SF 94110 (shelter location confidential)",
+    "hours": "Shelter 24/7; office 9 am-5 pm",
+    "languages": null,
+    "website": null,
+    "services": "Emergency shelter for women and children. Coordinated-entry access point 415-926-3328 (Mon-Fri 9:30 am-4 pm, phone only).",
+    "access_note": "Call the crisis line to access shelter.",
+    "confidence": "official",
+    "source_url": "https://www.sf.gov/information/shelter-women-and-children-experiencing-domestic-violence",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You need a safe place to stay.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "yes",
+        "note": "Women and children"
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": "Women and children; API community focus"
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "sf-lacasa",
+    "name": "La Casa de las Madres",
+    "category": "shelter",
+    "counties": [
+      "San Francisco"
+    ],
+    "phone_24h": "877-503-1850",
+    "phone_office": "415-503-0500",
+    "text": "415-200-3575 (24-hr text); teen line 877-923-0700",
+    "address": "Office: 1269 Howard St, SF 94103 (shelter location confidential)",
+    "hours": "Shelter 24/7; office Mon/Wed/Fri 9 am-5 pm",
+    "languages": null,
+    "website": null,
+    "services": "Emergency shelter (8-week program) for women, teens and children; male children/teens welcome.",
+    "access_note": "Call crisis line to access shelter.",
+    "confidence": "official",
+    "source_url": "https://www.sf.gov/information/shelter-women-and-children-experiencing-domestic-violence",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice",
+      "text"
+    ],
+    "channel_notes": "24-hr text line 415-200-3575; teen line 877-923-0700.",
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You need emergency shelter or want to text an advocate.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "yes",
+        "note": "Women, teens and children; male children and teens welcome."
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": "Women, teens and their children"
+    },
+    "situation": {
+      "partner_home": [
+        "text"
+      ],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": true,
+    "verification_flag": null
+  },
+  {
+    "id": "sf-riley",
+    "name": "St. Vincent de Paul - Riley Center",
+    "category": "shelter",
+    "counties": [
+      "San Francisco"
+    ],
+    "phone_24h": "415-255-0165",
+    "phone_office": null,
+    "text": null,
+    "address": "Access point: 1175 Howard St, SF",
+    "hours": "Access point Mon-Fri 9 am-12 pm and 1-4:30 pm; crisis line 24/7",
+    "languages": null,
+    "website": null,
+    "services": "Emergency shelter; coordinated-entry access point for survivors.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://hsh.archive.sf.gov/services/how-to-get-services/coordinated-entry-access-points-for-survivors-of-violence/",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice",
+      "in_person"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You need a safe place to stay.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice",
+        "in_person"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "sf-safehouse",
+    "name": "San Francisco SafeHouse",
+    "category": "housing",
+    "counties": [
+      "San Francisco"
+    ],
+    "phone_24h": null,
+    "phone_office": "415-643-7861",
+    "text": null,
+    "address": "Access point: 1089 Mission St, SF 94103 (in person only)",
+    "hours": "Access point Mon 1-7:30 pm; Tue-Fri 1-5 pm and 6-11:30 pm",
+    "languages": null,
+    "website": null,
+    "services": "Transitional housing, rapid rehousing, emergency hotel vouchers.",
+    "access_note": null,
+    "confidence": "conflict",
+    "source_url": "https://hsh.archive.sf.gov/services/how-to-get-services/coordinated-entry-access-points-for-survivors-of-violence/",
+    "verified_on": "2026-11-06",
+    "notes": "Two sf.gov pages agree: SafeHouse access point = 1089 Mission St; Riley Center = 1175 Howard St. An HSH flyer PDF parsed with the labels swapped, so phone-confirm the address before sending someone in person.",
+    "focus": true,
+    "channels": [
+      "in_person",
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning",
+      "immediate"
+    ],
+    "when_to_use": "You need hotel vouchers, transitional or rapid rehousing. In person only; check hours first.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "in_person",
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": "inconsistent"
+  },
+  {
+    "id": "sf-raphael",
+    "name": "Raphael House",
+    "category": "shelter",
+    "counties": [
+      "San Francisco"
+    ],
+    "phone_24h": null,
+    "phone_office": "415-345-7200",
+    "text": null,
+    "address": "1065 Sutter St, SF 94109",
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "Shelter for families and women in late pregnancy. Intake via Bayview Access Point 415-430-6320 or Central City Access Point 415-644-0504.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.sf.gov/information/shelter-women-and-children-experiencing-domestic-violence",
+    "verified_on": "2026-11-06",
+    "notes": "Page does not say it is DV-only.",
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You need a safe place to stay.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "yes",
+        "note": "Families and women in late pregnancy"
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": "Families"
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "sf-woman",
+    "name": "W.O.M.A.N., Inc.",
+    "category": "hotline",
+    "counties": [
+      "San Francisco"
+    ],
+    "phone_24h": "877-384-3578",
+    "phone_office": null,
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": null,
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://sf.gov/domestic-and-family-violence-resources",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "sf-sfwar",
+    "name": "San Francisco Women Against Rape",
+    "category": "hotline",
+    "counties": [
+      "San Francisco"
+    ],
+    "phone_24h": "415-647-7273",
+    "phone_office": "415-861-2024",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": null,
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://sf.gov/domestic-and-family-violence-resources",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "sf-bwr",
+    "name": "Black Women Revolt Against Domestic Violence",
+    "category": "hotline",
+    "counties": [
+      "San Francisco"
+    ],
+    "phone_24h": null,
+    "phone_office": "888-260-1498",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": null,
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://sf.gov/domestic-and-family-violence-resources",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "sf-lnf",
+    "name": "Love Never Fails",
+    "category": "hotline",
+    "counties": [
+      "San Francisco"
+    ],
+    "phone_24h": null,
+    "phone_office": "844-249-2698",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": null,
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://sf.gov/domestic-and-family-violence-resources",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "sf-ovwr",
+    "name": "SF Mayor's Office for Victims' Rights",
+    "category": "victim_services",
+    "counties": [
+      "San Francisco"
+    ],
+    "phone_24h": null,
+    "phone_office": "628-652-1175",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "Navigation help. Leave voicemail with name, number, whether it is safe to call and when, language; they reply within 48 business hours if safe.",
+    "access_note": "Online form: sf.gov/get-help-if-you-are-a-victim-or-survivor-in-san-francisco/. info.ovwr@sf.gov",
+    "confidence": "official",
+    "source_url": "https://www.sf.gov/help-for-domestic-and-intimate-partner-violence-victims-in-san-francisco",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice",
+      "web_form",
+      "email"
+    ],
+    "channel_notes": "Online form at sf.gov/get-help-if-you-are-a-victim-or-survivor-in-san-francisco/. Voicemail: say if it is safe to call back and when. Reply within 48 business hours.",
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want someone to help you navigate SF services without calling a hotline. Form works while partner is home.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [
+        "web_form",
+        "email"
+      ],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": true,
+    "verification_flag": null
+  },
+  {
+    "id": "sf-cuav",
+    "name": "Community United Against Violence (CUAV) - LGBTQ+",
+    "category": "culturally_specific",
+    "counties": [
+      "San Francisco",
+      "Alameda"
+    ],
+    "phone_24h": null,
+    "phone_office": "415-777-5500",
+    "text": null,
+    "address": "427 S Van Ness Ave, SF 94103",
+    "hours": "Mon-Fri 10 am-6 pm",
+    "languages": null,
+    "website": null,
+    "services": "Free, no citizenship requirement. Support groups, legal assistance, resource list. 415-333-4357 listed as appointment phone.",
+    "access_note": null,
+    "confidence": "aggregator",
+    "source_url": "https://www.1degree.org/opp/get-help-finding-resources-for-community-united-against-violence-san-francisco-california",
+    "verified_on": "2026-11-06",
+    "notes": "Directory says NO dedicated crisis line. Verify directly before labeling 415-333-4357 as a hotline.",
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You are LGBTQ+ and want a community-specific advocate.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "no",
+        "note": "No citizenship requirement listed (1degree.org)."
+      },
+      "population": "LGBTQ+ survivors"
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": "unverified"
+  },
+  {
+    "id": "sf-bala",
+    "name": "Bay Area Legal Aid - San Francisco",
+    "category": "legal",
+    "counties": [
+      "San Francisco"
+    ],
+    "phone_24h": null,
+    "phone_office": "415-982-1300",
+    "text": null,
+    "address": "1800 Market St, 3rd Floor, SF 94102 (walk-in)",
+    "hours": null,
+    "languages": null,
+    "website": "https://baylegal.org/",
+    "services": "Family law incl. restraining orders for low-income survivors.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://sf.gov/domestic-and-family-violence-resources",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want a restraining order, custody help or immigration relief.",
+    "topics": [
+      "restraining_order",
+      "custody",
+      "immigration"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "cora",
+    "name": "CORA - Community Overcoming Relationship Abuse",
+    "category": "hotline",
+    "counties": [
+      "San Mateo"
+    ],
+    "phone_24h": "800-300-1080",
+    "phone_office": null,
+    "text": null,
+    "address": "2211 Palm Ave, San Mateo 94403",
+    "hours": null,
+    "languages": "English, Spanish",
+    "website": "https://www.corasupport.org/",
+    "services": "County's dedicated IPV agency. Confidential Safe Houses (adults with minor children; no gender requirement), free Legal Line, family-law representation, supportive housing (subsidized up to 1-3 years), counseling, children's program. resources@corasupport.org. Referral gateway to the PHS Safe Pets Program.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.smc-connect.org/locations/community-overcoming-relationship-abuse-cora",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice",
+      "email"
+    ],
+    "channel_notes": "Hotline 24/7. Email resources@corasupport.org is listed, but response time is unknown; use the hotline for urgent needs.",
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You need a safe house, legal help or a plan in San Mateo County. Ask about pet placement.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "yes",
+        "note": "Safe House accepts adults with minor children; boys' age limit not stated."
+      },
+      "pets": {
+        "status": "partial",
+        "note": "Pets can be placed up to 30 days via PHS Safe Pets Program with CORA referral (SMC residents). Pets in the Safe House itself: not stated."
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": "Anyone experiencing intimate partner abuse, any gender"
+    },
+    "situation": {
+      "partner_home": [
+        "email"
+      ],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": true,
+    "verification_flag": null
+  },
+  {
+    "id": "smc-fjc",
+    "name": "San Mateo County Family Justice Center",
+    "category": "family_justice_center",
+    "counties": [
+      "San Mateo"
+    ],
+    "phone_24h": null,
+    "phone_office": null,
+    "text": null,
+    "address": "1510 Fashion Island Blvd, San Mateo",
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "DA-operated, multidisciplinary: DV, sexual assault, child/elder abuse, trafficking.",
+    "access_note": null,
+    "confidence": "conflict",
+    "source_url": "https://www.smcgov.org/da/news/launching-san-mateo-countys-new-family-justice-center",
+    "verified_on": "2026-11-06",
+    "notes": "Source is a May 14, 2025 launch announcement. Opening date, phone, hours NOT confirmed. Verify it is open before showing.",
+    "focus": true,
+    "channels": [
+      "in_person"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want several services (advocate, legal, police/DA) in one place.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "in_person"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": "inconsistent"
+  },
+  {
+    "id": "smc-court",
+    "name": "San Mateo Superior Court restraining-order help",
+    "category": "court_help",
+    "counties": [
+      "San Mateo"
+    ],
+    "phone_24h": null,
+    "phone_office": null,
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": "https://www.sanmateo.courts.ca.gov/flf",
+    "services": "Family Law Facilitator LiveChat; Guide and File online questionnaire (efile: sanmateo.courts.ca.gov/ogf); DVRO e-filing accepted; forms at Redwood City clerk.",
+    "access_note": "Bay Area Legal Aid San Mateo (650) 358-0745 reviews DVRO forms.",
+    "confidence": "official",
+    "source_url": "https://www.sanmateo.courts.ca.gov/system/files/self-help/restrainingorderassistance.pdf",
+    "verified_on": "2026-11-06",
+    "notes": "Court page gives no phone for FLF/clerk.",
+    "focus": true,
+    "channels": [
+      "chat",
+      "web_form",
+      "in_person"
+    ],
+    "channel_notes": "Family Law Facilitator LiveChat; Guide and File builds and e-files DVRO forms online; e-filing accepted for DV orders.",
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want to prepare a restraining order online. Works while partner is home.",
+    "topics": [
+      "restraining_order"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [
+        "chat",
+        "web_form"
+      ],
+      "partner_away": [
+        "in_person"
+      ]
+    },
+    "partner_home_ok": true,
+    "verification_flag": null
+  },
+  {
+    "id": "nds",
+    "name": "Next Door Solutions to Domestic Violence",
+    "category": "hotline",
+    "counties": [
+      "Santa Clara"
+    ],
+    "phone_24h": "(408) 279-2962",
+    "phone_office": "408-501-7550",
+    "text": null,
+    "address": "234 E Gish Rd, Suite 200, San Jose 95112",
+    "hours": null,
+    "languages": "English, Spanish, Vietnamese",
+    "website": null,
+    "services": "Emergency shelter (~19 people/night), housing solutions, support groups. Free. ADA accessible, LGBTQ friendly. If shelter is full, 'no one is turned away without an alternative housing solution'.",
+    "access_note": null,
+    "confidence": "conflict",
+    "source_url": "https://desj.santaclaracounty.gov/offices/gender-based-violence-prevention/ogbvp-resources",
+    "verified_on": "2026-11-06",
+    "notes": "Address conflict: county page says 234 E Gish Rd Ste 200, San Jose 95112; 1degree.org says 1400 Parkmoor Ave Ste 120, San Jose 95126. Confirm before directing anyone in person. Shelter info from 1degree (aggregator).",
+    "focus": true,
+    "channels": [
+      "voice",
+      "in_person"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You need shelter in Santa Clara County; call to ask about space.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "yes",
+        "note": "Boys and girls up to 18, and into adulthood when accompanying their mothers."
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "no",
+        "note": "'No citizenship requirements' (1degree.org)."
+      },
+      "population": "Women and their children; LGBTQ friendly"
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice",
+        "in_person"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": "inconsistent"
+  },
+  {
+    "id": "ywca-sv",
+    "name": "YWCA Silicon Valley - DV Support Network",
+    "category": "hotline",
+    "counties": [
+      "Santa Clara"
+    ],
+    "phone_24h": "1-800-572-2782",
+    "phone_office": "(408) 295-4011",
+    "text": null,
+    "address": "375 S Third St, San Jose 95112",
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "Counseling, safety planning, legal assistance, court accompaniment, immigration assistance, support groups. Call hotline to schedule Sunnyvale FJC appointment.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://desj.santaclaracounty.gov/offices/gender-based-violence-prevention/ogbvp-resources",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice",
+      "in_person"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [
+      "immigration",
+      "restraining_order"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice",
+        "in_person"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "aaci",
+    "name": "AACI Asian Women's Home",
+    "category": "hotline",
+    "counties": [
+      "Santa Clara"
+    ],
+    "phone_24h": "(408) 975-2739",
+    "phone_office": null,
+    "text": null,
+    "address": "2400 Moorpark Ave, Suite 300, San Jose 95128",
+    "hours": null,
+    "languages": "English, Vietnamese, Chinese, other Asian languages",
+    "website": null,
+    "services": null,
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://desj.santaclaracounty.gov/offices/gender-based-violence-prevention/ogbvp-resources",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": "Asian communities; multilingual"
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "maitri",
+    "name": "Maitri (South Asian families)",
+    "category": "hotline",
+    "counties": [
+      "Santa Clara"
+    ],
+    "phone_24h": "1-888-862-4874",
+    "phone_office": null,
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": "English, South Asian languages",
+    "website": null,
+    "services": "South Asian families. Immigration program: VAWA self-petition, U visa, T visa. Local (408) 436-8398.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://desj.santaclaracounty.gov/offices/gender-based-violence-prevention/ogbvp-resources",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "community-solutions",
+    "name": "Community Solutions (Morgan Hill, San Martin, Gilroy)",
+    "category": "hotline",
+    "counties": [
+      "Santa Clara"
+    ],
+    "phone_24h": "1-877-363-7238",
+    "phone_office": null,
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": "English, Spanish",
+    "website": null,
+    "services": null,
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://desj.santaclaracounty.gov/offices/gender-based-violence-prevention/ogbvp-resources",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "sc-vsu",
+    "name": "Santa Clara County Victim Services Unit",
+    "category": "victim_services",
+    "counties": [
+      "Santa Clara"
+    ],
+    "phone_24h": null,
+    "phone_office": "(408) 295-2656",
+    "text": null,
+    "address": "70 W Hedding St, Suite 116, San Jose",
+    "hours": "Mon-Fri 8 am-5 pm",
+    "languages": null,
+    "website": null,
+    "services": "Crisis intervention, emergency assistance, court escort, victim compensation help.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://desj.santaclaracounty.gov/offices/gender-based-violence-prevention/ogbvp-resources",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want help with court, emergency aid or compensation.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "sc-rohc",
+    "name": "Santa Clara Restraining Order Help Center",
+    "category": "court_help",
+    "counties": [
+      "Santa Clara"
+    ],
+    "phone_24h": null,
+    "phone_office": "(408) 534-5709",
+    "text": null,
+    "address": "Family Justice Center Courthouse, 201 N First St, San Jose 95113",
+    "hours": "CONFLICT: county page says Mon-Fri 8:30-3:00 (closed 12:30-1:30); court flyer says Mon-Thu 8:30-1:30, Fri 8:30-12:00, emergencies only",
+    "languages": null,
+    "website": null,
+    "services": "Remote help via scscourt.org; phone (408) 882-2926.",
+    "access_note": null,
+    "confidence": "conflict",
+    "source_url": "https://santaclara.courts.ca.gov/system/files/general/shc-015.pdf",
+    "verified_on": "2026-11-06",
+    "notes": "Prefer court's own flyer; call before travel.",
+    "focus": true,
+    "channels": [
+      "chat",
+      "email",
+      "voice",
+      "in_person"
+    ],
+    "channel_notes": "Remote help through scscourt.org live chat and email; phone (408) 882-2926.",
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want help filing a restraining order.",
+    "topics": [
+      "restraining_order"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [
+        "chat",
+        "email"
+      ],
+      "partner_away": [
+        "voice",
+        "in_person"
+      ]
+    },
+    "partner_home_ok": true,
+    "verification_flag": "inconsistent"
+  },
+  {
+    "id": "sc-probono",
+    "name": "Pro Bono Project Silicon Valley",
+    "category": "legal",
+    "counties": [
+      "Santa Clara"
+    ],
+    "phone_24h": null,
+    "phone_office": "408-998-5298",
+    "text": null,
+    "address": null,
+    "hours": "Mon-Fri 8:30 am-5 pm",
+    "languages": null,
+    "website": null,
+    "services": "Free attorney help for qualifying clients on DV restraining orders, custody, visitation.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://desj.santaclaracounty.gov/offices/gender-based-violence-prevention/ogbvp-resources",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want a restraining order, custody help or immigration relief.",
+    "topics": [
+      "restraining_order",
+      "custody"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "cdp",
+    "name": "Center for Domestic Peace",
+    "category": "hotline",
+    "counties": [
+      "Marin"
+    ],
+    "phone_24h": "415-924-6616",
+    "phone_office": null,
+    "text": "Text line (415) 526-2557 (aggregator)",
+    "address": "734 A St, San Rafael 94901",
+    "hours": "Hotline 24/7; office Mon-Fri 9 am-5 pm",
+    "languages": "English, Spanish",
+    "website": "https://centerfordomesticpeace.org/",
+    "services": "Emergency shelter, transitional housing, counseling, free legal help; Marin coordinated-entry access point. No citizenship requirement.",
+    "access_note": null,
+    "confidence": "aggregator",
+    "source_url": "https://www.1degree.org/opp/get-emergency-shelter-services-center-for-domestic-peace-san-rafael-ca",
+    "verified_on": "2026-11-06",
+    "notes": "Hotline confirmed on 1degree and womenslaw; official site not fetched.",
+    "focus": false,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": "unverified"
+  },
+  {
+    "id": "ywca-sonoma",
+    "name": "YWCA Sonoma County - DV Services",
+    "category": "hotline",
+    "counties": [
+      "Sonoma"
+    ],
+    "phone_24h": "(707) 546-1234",
+    "phone_office": null,
+    "text": null,
+    "address": "Family Justice Center, 2755 Mendocino Ave, Santa Rosa",
+    "hours": "FJC weekdays 8:30 am-4:30 pm",
+    "languages": "Support groups in English or Spanish",
+    "website": null,
+    "services": "Confidential safe-house shelter, court accompaniment, case management, safety planning, economic empowerment.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://ywca-sonoma.squarespace.com/dv-services",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": false,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "napa-news",
+    "name": "Napa Emergency Women's Services (NEWS)",
+    "category": "hotline",
+    "counties": [
+      "Napa"
+    ],
+    "phone_24h": "(707) 255-6397",
+    "phone_office": "(707) 252-3687",
+    "text": null,
+    "address": "1141 Pear Tree Lane, Suite 220, Napa 94558",
+    "hours": null,
+    "languages": null,
+    "website": "http://www.napanews.org/",
+    "services": "Confidential emergency shelter, bilingual support groups, court advocacy.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://solanocounty.com/depts/fvp/sexual_assault/resources.asp",
+    "verified_on": "2026-11-06",
+    "notes": "womenslaw.org also lists 800-799-7233, which is the national hotline - not NEWS.",
+    "focus": false,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "napa-vs",
+    "name": "Napa County Victim Services Division",
+    "category": "victim_services",
+    "counties": [
+      "Napa"
+    ],
+    "phone_24h": null,
+    "phone_office": "(707) 299-1414",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": null,
+    "access_note": null,
+    "confidence": "aggregator",
+    "source_url": "https://www.womenslaw.org/find-help/ca/advocates-and-shelters/local-programs/all",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": false,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want help with court, emergency aid or compensation.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": "unverified"
+  },
+  {
+    "id": "safequest",
+    "name": "SafeQuest Solano",
+    "category": "hotline",
+    "counties": [
+      "Solano"
+    ],
+    "phone_24h": "1-866-487-7233",
+    "phone_office": "707-422-7345",
+    "text": null,
+    "address": "1745 Enterprise Dr #2D, Fairfield 94533",
+    "hours": null,
+    "languages": null,
+    "website": "http://www.safequest.org",
+    "services": "State-certified emergency shelter, 24-hr hotline.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://solanocounty.com/depts/fvp/sexual_assault/resources.asp",
+    "verified_on": "2026-11-06",
+    "notes": "Solano county page; no Solano Family Justice Center found.",
+    "focus": false,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "smc-text911",
+    "name": "Text to 911 (San Mateo County)",
+    "category": "emergency",
+    "counties": [
+      "San Mateo"
+    ],
+    "phone_24h": null,
+    "phone_office": null,
+    "text": "Text 911",
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "All county police, fire and sheriff dispatchers accept texts (since Oct 2018). Call if you can, text if you can't.",
+    "access_note": "English only. Needs a text/data plan and location services on. Give exact location; avoid emojis/abbreviations.",
+    "confidence": "official",
+    "source_url": "https://www.smchealth.org/article/texting-911-now-option-residents-emergency",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "text"
+    ],
+    "channel_notes": "Silent option when you cannot speak. English only.",
+    "urgency": [
+      "immediate"
+    ],
+    "when_to_use": "You are in immediate danger and cannot speak.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [
+        "text"
+      ],
+      "partner_away": []
+    },
+    "partner_home_ok": true,
+    "verification_flag": null
+  },
+  {
+    "id": "scc-text911",
+    "name": "Text to 911 (Santa Clara County)",
+    "category": "emergency",
+    "counties": [
+      "Santa Clara"
+    ],
+    "phone_24h": null,
+    "phone_office": null,
+    "text": "Text 911",
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "Countywide since Sept 2019; texts route to the local jurisdiction's dispatcher.",
+    "access_note": "Dispatch cannot pinpoint location from a text; say where you are.",
+    "confidence": "aggregator",
+    "source_url": "https://www.cbsnews.com/amp/sanfrancisco/news/santa-clara-county-san-jose-text-911-service-first-responders",
+    "verified_on": "2026-11-06",
+    "notes": "2019 news article: Los Gatos and Campbell were not yet live then; current status unconfirmed. Verify before publishing.",
+    "focus": true,
+    "channels": [
+      "text"
+    ],
+    "channel_notes": "Silent option when you cannot speak.",
+    "urgency": [
+      "immediate"
+    ],
+    "when_to_use": "You are in immediate danger and cannot speak.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [
+        "text"
+      ],
+      "partner_away": []
+    },
+    "partner_home_ok": true,
+    "verification_flag": "unverified"
+  },
+  {
+    "id": "sf-text911",
+    "name": "Text to 911 (San Francisco)",
+    "category": "emergency",
+    "counties": [
+      "San Francisco"
+    ],
+    "phone_24h": null,
+    "phone_office": null,
+    "text": "Text 911",
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "SF.gov's DV page says: if it isn't safe to call, you can text 911.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://sf.gov/domestic-and-family-violence-resources",
+    "verified_on": "2026-11-06",
+    "notes": "Single-sentence official statement; details (languages, limits) not found.",
+    "focus": true,
+    "channels": [
+      "text"
+    ],
+    "channel_notes": "Silent option when you cannot speak.",
+    "urgency": [
+      "immediate"
+    ],
+    "when_to_use": "You are in immediate danger and cannot speak.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [
+        "text"
+      ],
+      "partner_away": []
+    },
+    "partner_home_ok": true,
+    "verification_flag": null
+  },
+  {
+    "id": "smc-victim-services",
+    "name": "San Mateo County Victim Services Division",
+    "category": "victim_services",
+    "counties": [
+      "San Mateo"
+    ],
+    "phone_24h": null,
+    "phone_office": "(650) 599-7479",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "Court support, emergency assistance, help with CalVCB application. Free; open to all regardless of immigration status, sexual orientation, gender identity, race, religion or income.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.smcgov.org/dvc/resources",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want help with court, emergency aid or compensation.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "no",
+        "note": "Open to all regardless of immigration status."
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "smc-rts",
+    "name": "Rape Trauma Services (San Mateo County)",
+    "category": "hotline",
+    "counties": [
+      "San Mateo"
+    ],
+    "phone_24h": "(650) 692-7273",
+    "phone_office": null,
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "24-hr crisis line, accompaniment, advocacy, therapy; children, teens, families. Multiple languages. Free, no insurance needed.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.smcgov.org/dvc/resources",
+    "verified_on": "2026-11-06",
+    "notes": "Sexual violence focus; include for survivors whose abuse includes sexual assault.",
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You want to talk to an advocate about safety, options or a plan.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "smc-safepets",
+    "name": "Peninsula Humane Society & SPCA - Safe Pets Program",
+    "category": "pets",
+    "counties": [
+      "San Mateo"
+    ],
+    "phone_24h": null,
+    "phone_office": "650-340-7022 ext. 378",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": "https://phs-spca.org/?p=4008",
+    "services": "Up to 30 days of free temporary housing for pets of DV victims.",
+    "access_note": "Must be a San Mateo County resident AND referred by CORA. Contact: Dayna Pesenti, dpesenti@phs-spca.org.",
+    "confidence": "official",
+    "source_url": "https://phs-spca.org/?p=4008",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": "Referral comes through CORA; you do not contact PHS first. The PHS staff email is for advocates, not survivors.",
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You are leaving and cannot take a pet to shelter. Ask CORA to refer you.",
+    "topics": [
+      "pets"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "yes",
+        "note": "Up to 30 days, free; needs CORA referral and SMC residency."
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "smc-bala",
+    "name": "Bay Area Legal Aid - San Mateo County",
+    "category": "legal",
+    "counties": [
+      "San Mateo"
+    ],
+    "phone_24h": null,
+    "phone_office": "650-358-0745",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "Advice line 650-472-2666. Reviews self-completed DVRO forms; free help with immigration issues for low-income DV survivors, including VAWA.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.smcgov.org/ceo/immigration-legal-services",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want a restraining order, custody help or immigration relief.",
+    "topics": [
+      "immigration",
+      "restraining_order"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "no",
+        "note": "Immigration issues for DV survivors incl. VAWA are served; low income required."
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "smc-las",
+    "name": "Legal Aid Society of San Mateo County",
+    "category": "legal",
+    "counties": [
+      "San Mateo"
+    ],
+    "phone_24h": null,
+    "phone_office": "650-558-0915",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "VAWA, U-visas, DACA, deportation defense. Pro bono for teen parents and their families.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.smcgov.org/ceo/immigration-legal-services",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want a restraining order, custody help or immigration relief.",
+    "topics": [
+      "immigration"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "smc-catholic",
+    "name": "Catholic Charities - Refugee & Immigrant Services (San Mateo)",
+    "category": "legal",
+    "counties": [
+      "San Mateo"
+    ],
+    "phone_24h": null,
+    "phone_office": "650-295-2160",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "VAWA, U-visas, citizenship, adjustment of status, SIJS.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.smcgov.org/ceo/immigration-legal-services",
+    "verified_on": "2026-11-06",
+    "notes": "Cost not stated.",
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want a restraining order, custody help or immigration relief.",
+    "topics": [
+      "immigration"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "smc-clsepa",
+    "name": "Community Legal Services in East Palo Alto",
+    "category": "legal",
+    "counties": [
+      "San Mateo"
+    ],
+    "phone_24h": null,
+    "phone_office": "650-326-6440",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "U visas, VAWA self-petitions, removal defense, SIJS.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.smcgov.org/ceo/immigration-legal-services",
+    "verified_on": "2026-11-06",
+    "notes": "Cost not stated.",
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want a restraining order, custody help or immigration relief.",
+    "topics": [
+      "immigration"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "smc-ismv",
+    "name": "Immigration Services of Mountain View",
+    "category": "legal",
+    "counties": [
+      "San Mateo",
+      "Santa Clara"
+    ],
+    "phone_24h": null,
+    "phone_office": "650-938-4911",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "U visa, VAWA, fee waivers, permanent residence, citizenship.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.smcgov.org/ceo/immigration-legal-services",
+    "verified_on": "2026-11-06",
+    "notes": "Cost not stated; fee waivers mentioned.",
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want a restraining order, custody help or immigration relief.",
+    "topics": [
+      "immigration"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "smc-iiba",
+    "name": "International Institute of the Bay Area",
+    "category": "legal",
+    "counties": [
+      "San Mateo"
+    ],
+    "phone_24h": null,
+    "phone_office": "650-780-7530",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "Citizenship, U-visas, VAWA, TPS.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.smcgov.org/ceo/immigration-legal-services",
+    "verified_on": "2026-11-06",
+    "notes": "Cost not stated.",
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want a restraining order, custody help or immigration relief.",
+    "topics": [
+      "immigration"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "smc-tahirih",
+    "name": "Tahirih Justice Center",
+    "category": "legal",
+    "counties": [
+      "San Mateo"
+    ],
+    "phone_24h": null,
+    "phone_office": "650-270-2100",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "Gender-based asylum, VAWA petitions, T and U visas, SIJS.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.smcgov.org/ceo/immigration-legal-services",
+    "verified_on": "2026-11-06",
+    "notes": "Cost not stated.",
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want a restraining order, custody help or immigration relief.",
+    "topics": [
+      "immigration"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "safechatsv",
+    "name": "SafeChat Silicon Valley (online chat)",
+    "category": "hotline",
+    "counties": [
+      "Santa Clara"
+    ],
+    "phone_24h": null,
+    "phone_office": null,
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": "https://safechatsv.com",
+    "services": "Online chat with trained advocates; counselors connect you to services. Partners include YWCA, AACI, Community Solutions.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://desj.santaclaracounty.gov/offices/gender-based-violence-prevention/ogbvp-resources",
+    "verified_on": "2026-11-06",
+    "notes": "County page lists hours that vary by day; hours were not captured. Launched 2016 - confirm still active.",
+    "focus": true,
+    "channels": [
+      "chat"
+    ],
+    "channel_notes": "Quiet option while partner is home; chat history can be seen on a shared device.",
+    "urgency": [
+      "immediate",
+      "planning"
+    ],
+    "when_to_use": "You can't talk out loud and want to chat with an advocate.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [
+        "chat"
+      ],
+      "partner_away": []
+    },
+    "partner_home_ok": true,
+    "verification_flag": null
+  },
+  {
+    "id": "scc-aaci-fjc",
+    "name": "AACI Family Justice Center (San Jose)",
+    "category": "family_justice_center",
+    "counties": [
+      "Santa Clara"
+    ],
+    "phone_24h": null,
+    "phone_office": "(408) 975-2730",
+    "text": null,
+    "address": "2400 Moorpark Ave, Suite 300, San Jose 95128",
+    "hours": "Thursdays 9 am-5 pm",
+    "languages": "English, Mandarin, Cantonese, Vietnamese, Spanish, Lao, Farsi, Arabic",
+    "website": null,
+    "services": "Free consults with a DA, family-law attorneys (restraining orders, custody) and immigration attorneys (VAWA, U-visa).",
+    "access_note": null,
+    "confidence": "aggregator",
+    "source_url": "https://sites.google.com/view/vsuresourceguide/immigrant-refugee-support/immigration-law",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "in_person",
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want several services (advocate, legal, police/DA) in one place.",
+    "topics": [
+      "immigration",
+      "restraining_order",
+      "custody"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "in_person",
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": "unverified"
+  },
+  {
+    "id": "scc-sunnyvale-fjc",
+    "name": "Sunnyvale Family Justice Center (YWCA)",
+    "category": "family_justice_center",
+    "counties": [
+      "Santa Clara"
+    ],
+    "phone_24h": null,
+    "phone_office": "(408) 749-0793",
+    "text": null,
+    "address": "298 S Sunnyvale Ave, Suite 105, Sunnyvale",
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": null,
+    "access_note": null,
+    "confidence": "aggregator",
+    "source_url": "https://sites.google.com/view/vsuresourceguide/immigrant-refugee-support/immigration-law",
+    "verified_on": "2026-11-06",
+    "notes": "Hours/schedule not captured; ywca-sv hotline can schedule an appointment.",
+    "focus": true,
+    "channels": [
+      "voice",
+      "in_person"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want several services (advocate, legal, police/DA) in one place.",
+    "topics": [],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice",
+        "in_person"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": "unverified"
+  },
+  {
+    "id": "scc-bala",
+    "name": "Bay Area Legal Aid - San Jose",
+    "category": "legal",
+    "counties": [
+      "Santa Clara"
+    ],
+    "phone_24h": null,
+    "phone_office": "(408) 283-3700",
+    "text": null,
+    "address": "4 N Second St, Suite 600, San Jose",
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "Free civil legal help for low-income people incl. DV-related immigration matters.",
+    "access_note": null,
+    "confidence": "aggregator",
+    "source_url": "https://sites.google.com/view/vsuresourceguide/immigrant-refugee-support/immigration-law",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want a restraining order, custody help or immigration relief.",
+    "topics": [
+      "restraining_order",
+      "immigration"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": "unverified"
+  },
+  {
+    "id": "scc-cali",
+    "name": "Centro de Ayuda Legal para Inmigrantes (CALI)",
+    "category": "legal",
+    "counties": [
+      "Santa Clara"
+    ],
+    "phone_24h": null,
+    "phone_office": "(650) 938-4041",
+    "text": null,
+    "address": "1125 Benton St, Santa Clara",
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "VAWA and U-visa.",
+    "access_note": null,
+    "confidence": "aggregator",
+    "source_url": "https://sites.google.com/view/vsuresourceguide/immigrant-refugee-support/immigration-law",
+    "verified_on": "2026-11-06",
+    "notes": "Cost/eligibility not stated.",
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want a restraining order, custody help or immigration relief.",
+    "topics": [
+      "immigration"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": "unverified"
+  },
+  {
+    "id": "sf-croc",
+    "name": "Cooperative Restraining Order Clinic (CROC)",
+    "category": "legal",
+    "counties": [
+      "San Francisco"
+    ],
+    "phone_24h": null,
+    "phone_office": "415-864-4722",
+    "text": null,
+    "address": "3543 18th St, #5, SF",
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "Restraining orders; crime-victim (Marsy's Law) help at 415-830-5672.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.sf.gov/legal-services-for-survivors",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want a restraining order, custody help or immigration relief.",
+    "topics": [
+      "restraining_order"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "sf-opendoor",
+    "name": "Open Door Legal",
+    "category": "legal",
+    "counties": [
+      "San Francisco"
+    ],
+    "phone_24h": null,
+    "phone_office": "415-735-4124",
+    "text": null,
+    "address": "Offices: Bayview 4634 3rd St; Excelsior 60 Ocean Ave; Mission 2302 Mission St #104; Sunset 1722 Irving St; Tenderloin 374 Ellis St; Western Addition 1113 Fillmore St",
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "Custody, support, dissolution, restraining orders, victim's rights, DV.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.sf.gov/legal-services-for-survivors",
+    "verified_on": "2026-11-06",
+    "notes": "Eligibility described elsewhere as low-income SF residents; not on this page.",
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want a restraining order, custody help or immigration relief.",
+    "topics": [
+      "restraining_order",
+      "custody"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "sf-apilo",
+    "name": "Asian Pacific Islander Legal Outreach - Violence Against Women Project",
+    "category": "legal",
+    "counties": [
+      "San Francisco"
+    ],
+    "phone_24h": null,
+    "phone_office": "415-567-6255",
+    "text": null,
+    "address": "1121 Mission St, SF 94103",
+    "hours": "Mon-Fri 9 am-5 pm",
+    "languages": "Cantonese, Japanese, Korean, Lao, Mandarin, Spanish, Tagalog, Taiwanese, Thai, Vietnamese",
+    "website": null,
+    "services": "Free full-scope legal help for survivors; family and immigration law (VAWA/U visa not explicitly listed).",
+    "access_note": null,
+    "confidence": "aggregator",
+    "source_url": "https://www.1degree.org/opp/get-legal-help-for-asian-survivors-of-domestic-violence",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want a restraining order, custody help or immigration relief.",
+    "topics": [
+      "immigration",
+      "restraining_order"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": "API and other survivors"
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": "unverified"
+  },
+  {
+    "id": "sf-jdc",
+    "name": "Justice & Diversity Center, SF Bar Association",
+    "category": "legal",
+    "counties": [
+      "San Francisco"
+    ],
+    "phone_24h": null,
+    "phone_office": "415-575-3131",
+    "text": null,
+    "address": "50 Fremont St, Suite 1700, SF",
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "Family law incl. restraining orders; immigration matters. Free monthly clinics in Mission, Tenderloin, Bayview.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.sf.gov/legal-services-for-survivors",
+    "verified_on": "2026-11-06",
+    "notes": null,
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want a restraining order, custody help or immigration relief.",
+    "topics": [
+      "restraining_order",
+      "custody",
+      "immigration"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "sf-carecen",
+    "name": "CARECEN San Francisco",
+    "category": "legal",
+    "counties": [
+      "San Francisco"
+    ],
+    "phone_24h": null,
+    "phone_office": "415-824-2330",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "T and U visas, VAWA, asylum, TPS, family visas, DACA.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.smcgov.org/ceo/immigration-legal-services",
+    "verified_on": "2026-11-06",
+    "notes": "Cost not stated.",
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want a restraining order, custody help or immigration relief.",
+    "topics": [
+      "immigration"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "sf-larazacl",
+    "name": "La Raza Centro Legal",
+    "category": "legal",
+    "counties": [
+      "San Francisco"
+    ],
+    "phone_24h": null,
+    "phone_office": "415-575-3500",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "Crime-victim immigration relief, asylum, family petitions. Spanish-speaking clients; fee waivers for very low income.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.smcgov.org/ceo/immigration-legal-services",
+    "verified_on": "2026-11-06",
+    "notes": "VAWA not listed.",
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want a restraining order, custody help or immigration relief.",
+    "topics": [
+      "immigration"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  },
+  {
+    "id": "sf-pangea",
+    "name": "Pangea Legal Services",
+    "category": "legal",
+    "counties": [
+      "San Francisco"
+    ],
+    "phone_24h": null,
+    "phone_office": "415-254-0475",
+    "text": null,
+    "address": null,
+    "hours": null,
+    "languages": null,
+    "website": null,
+    "services": "U-visas, asylum, removal defense, family petitions. Low-bono and pro-bono.",
+    "access_note": null,
+    "confidence": "official",
+    "source_url": "https://www.smcgov.org/ceo/immigration-legal-services",
+    "verified_on": "2026-11-06",
+    "notes": "VAWA not listed.",
+    "focus": true,
+    "channels": [
+      "voice"
+    ],
+    "channel_notes": null,
+    "urgency": [
+      "planning"
+    ],
+    "when_to_use": "You want a restraining order, custody help or immigration relief.",
+    "topics": [
+      "immigration"
+    ],
+    "constraints": {
+      "children": {
+        "status": "unknown",
+        "note": null
+      },
+      "pets": {
+        "status": "unknown",
+        "note": null
+      },
+      "citizenship_required": {
+        "status": "unknown",
+        "note": null
+      },
+      "population": null
+    },
+    "situation": {
+      "partner_home": [],
+      "partner_away": [
+        "voice"
+      ]
+    },
+    "partner_home_ok": false,
+    "verification_flag": null
+  }
+]
