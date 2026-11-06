@@ -1,0 +1,681 @@
+[
+  {
+    "id": "national-dv-hotline",
+    "name": "National Domestic Violence Hotline",
+    "type": "hotline",
+    "blurb": "Talk, text or chat with an advocate, any time.",
+    "blurbEs": "Habla, escribe o chatea con una persona, a cualquier hora.",
+    "counties": [
+      "all"
+    ],
+    "phone": "1-800-799-7233",
+    "text": "Text START to 88788",
+    "url": "https://www.thehotline.org/",
+    "hours": "24/7",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "notes": "Free, confidential 24/7 crisis support, safety planning and referrals by phone, text or live chat; Deaf Hotline videophone 1-855-812-1001.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.thehotline.org/"
+  },
+  {
+    "id": "988-lifeline",
+    "name": "988 Suicide & Crisis Lifeline",
+    "type": "hotline",
+    "blurb": "If you're overwhelmed or thinking of suicide.",
+    "blurbEs": "Si te sientes abrumada o piensas en el suicidio.",
+    "counties": [
+      "all"
+    ],
+    "phone": "988",
+    "text": "Text 988",
+    "url": "https://988lifeline.org/",
+    "hours": "24/7",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "notes": "Free, confidential 24/7 emotional and suicidal-crisis support by call, text or chat; Spanish available by text and chat.",
+    "lastVerified": "2026-11-06",
+    "source": "https://988lifeline.org/"
+  },
+  {
+    "id": "rainn-sexual-assault-hotline",
+    "name": "RAINN National Sexual Assault Hotline",
+    "type": "hotline",
+    "blurb": "Support after sexual assault, including by a partner.",
+    "blurbEs": "Apoyo tras una agresión sexual, también de tu pareja.",
+    "counties": [
+      "all"
+    ],
+    "phone": "1-800-656-4673",
+    "text": "Text HOPE to 64673",
+    "url": "https://rainn.org/help-and-healing/hotline/",
+    "hours": "24/7",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "notes": "Free, confidential 24/7 support for survivors of sexual assault, including sexual violence by a partner.",
+    "lastVerified": "2026-11-06",
+    "source": "https://rainn.org/help-and-healing/hotline/"
+  },
+  {
+    "id": "loveisrespect",
+    "name": "love is respect (National Dating Abuse Helpline)",
+    "type": "hotline",
+    "blurb": "For young people and dating relationships.",
+    "blurbEs": "Para jóvenes y relaciones de noviazgo.",
+    "counties": [
+      "all"
+    ],
+    "phone": "1-866-331-9474",
+    "text": "Text LOVEIS to 22522",
+    "url": "https://www.loveisrespect.org/",
+    "notes": "Support for young people and anyone worried about dating abuse, by phone, text or live chat.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.loveisrespect.org/"
+  },
+  {
+    "id": "strongheart-native-helpline",
+    "name": "StrongHearts Native Helpline",
+    "type": "hotline",
+    "blurb": "For Native American and Alaska Native people.",
+    "blurbEs": "Para personas nativas americanas y de Alaska.",
+    "counties": [
+      "all"
+    ],
+    "phone": "1-844-762-8483",
+    "text": "Text START to 1-844-762-8483",
+    "url": "https://strongheartshelpline.org/",
+    "hours": "24/7",
+    "notes": "Free 24/7 culturally specific domestic and sexual violence support for Native American and Alaska Native people.",
+    "lastVerified": "2026-11-06",
+    "source": "https://strongheartshelpline.org/"
+  },
+  {
+    "id": "cpedv-find-help",
+    "name": "California Partnership to End Domestic Violence – Find Help Directory",
+    "type": "other",
+    "blurb": "Directory of local help in every county.",
+    "blurbEs": "Directorio de ayuda local en cada condado.",
+    "counties": [
+      "all"
+    ],
+    "phone": "(916) 444-7163",
+    "url": "https://www.cpedv.org/find-help/",
+    "hours": "Mon–Fri 8:30am–4:30pm (office)",
+    "notes": "Statewide coalition with a directory of local DV programs by county; office and referral line, not a crisis line.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.cpedv.org/find-help/"
+  },
+  {
+    "id": "ca-victim-compensation-board",
+    "name": "California Victim Compensation Board (CalVCB)",
+    "type": "other",
+    "blurb": "Can pay back costs like medical bills or moving.",
+    "blurbEs": "Puede reembolsar gastos médicos o de mudanza.",
+    "counties": [
+      "all"
+    ],
+    "phone": "1-800-777-9229",
+    "url": "https://victims.ca.gov/",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "notes": "State agency that can reimburse crime-related expenses for eligible victims, including DV survivors; not a crisis line.",
+    "lastVerified": "2026-11-06",
+    "source": "https://victims.ca.gov/contact-us/"
+  },
+  {
+    "id": "ca-safe-at-home",
+    "name": "California Safe at Home (Secretary of State)",
+    "type": "other",
+    "blurb": "A free substitute address to keep yours private.",
+    "blurbEs": "Una dirección sustituta gratis para proteger la tuya.",
+    "counties": [
+      "all"
+    ],
+    "phone": "1-877-322-5227",
+    "url": "https://www.sos.ca.gov/registries/safe-home",
+    "notes": "Free confidential address program giving DV, stalking and sexual assault survivors a substitute mailing address; enroll through a designated Enrolling Agency.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.sos.ca.gov/registries/safe-home"
+  },
+  {
+    "id": "la-casa-de-las-madres",
+    "name": "La Casa de las Madres",
+    "type": "shelter",
+    "blurb": "SF shelter and crisis line.",
+    "blurbEs": "Refugio y línea de crisis en SF.",
+    "counties": [
+      "san-francisco"
+    ],
+    "phone": "1-877-503-1850",
+    "text": "Text (415) 200-3575",
+    "url": "https://www.lacasa.org/",
+    "hours": "24/7",
+    "notes": "Emergency shelter and 24/7 adult crisis line (teens: 1-877-923-0700); drop-in center (415) 503-0500, Mon–Fri 8:30am–5pm.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.lacasa.org/"
+  },
+  {
+    "id": "asian-womens-shelter",
+    "name": "Asian Women's Shelter",
+    "type": "shelter",
+    "blurb": "Shelter and crisis line in many languages.",
+    "blurbEs": "Refugio y línea de crisis en muchos idiomas.",
+    "counties": [
+      "san-francisco"
+    ],
+    "phone": "1-877-751-0880",
+    "url": "https://www.sfaws.org/",
+    "hours": "24/7",
+    "languages": [
+      "Multilingual",
+      "Korean"
+    ],
+    "notes": "Multilingual 24-hour crisis line for survivors of DV, human trafficking and FGM/C, plus a Korean Talk Line and an Arab Women's Services Program.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.sfaws.org/"
+  },
+  {
+    "id": "riley-center-svdp",
+    "name": "Riley Center (St. Vincent de Paul Society of SF)",
+    "type": "shelter",
+    "blurb": "SF shelter and longer-term housing.",
+    "blurbEs": "Refugio en SF y vivienda a más largo plazo.",
+    "counties": [
+      "san-francisco"
+    ],
+    "phone": "(415) 255-0165",
+    "url": "https://svdp-sf.org/what-we-do/riley-center/",
+    "hours": "24/7",
+    "notes": "24-hour support line; emergency shelter (up to 12 weeks) and transitional housing (up to 24 months).",
+    "lastVerified": "2026-11-06",
+    "source": "https://svdp-sf.org/what-we-do/riley-center/"
+  },
+  {
+    "id": "cuav",
+    "name": "Community United Against Violence (CUAV)",
+    "type": "counseling",
+    "blurb": "Support for LGBTQI survivors.",
+    "blurbEs": "Apoyo para sobrevivientes LGBTQI.",
+    "counties": [
+      "san-francisco"
+    ],
+    "phone": "(415) 777-5500",
+    "url": "https://www.cuav.org/",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "notes": "Peer advocacy counseling, safety planning and support groups for LGBTQI survivors; main office line, not 24-hour.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.cuav.org/"
+  },
+  {
+    "id": "mujeres-unidas-y-activas",
+    "name": "Mujeres Unidas y Activas (MUA)",
+    "type": "counseling",
+    "blurb": "Peer support for Latina immigrant women.",
+    "blurbEs": "Apoyo entre compañeras para mujeres latinas inmigrantes.",
+    "counties": [
+      "san-francisco",
+      "alameda"
+    ],
+    "phone": "(415) 431-2562",
+    "url": "https://mujeresunidas.net/programas/consejeria-apoyo/",
+    "hours": "Mon–Fri 9:30am–5pm",
+    "languages": [
+      "Spanish",
+      "Mam"
+    ],
+    "notes": "Peer counseling by state-trained DV and sexual assault counselors for Latina immigrant women (Oakland (510) 261-3398, Mam line (510) 905-9334).",
+    "lastVerified": "2026-11-06",
+    "source": "https://mujeresunidas.net/programas/consejeria-apoyo/"
+  },
+  {
+    "id": "apilo",
+    "name": "Asian Pacific Islander Legal Outreach (APILO)",
+    "type": "legal",
+    "blurb": "Family and immigration legal help.",
+    "blurbEs": "Ayuda legal familiar y de inmigración.",
+    "counties": [
+      "san-francisco",
+      "alameda"
+    ],
+    "phone": "(415) 567-6255",
+    "url": "https://www.apilegaloutreach.org/",
+    "languages": [
+      "Many Asian languages and dialects"
+    ],
+    "notes": "Family and immigration legal help for DV survivors (Oakland office (510) 251-2846); not a crisis line.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.apilegaloutreach.org/"
+  },
+  {
+    "id": "a-safe-place",
+    "name": "A Safe Place",
+    "type": "shelter",
+    "blurb": "Oakland shelter and crisis line.",
+    "blurbEs": "Refugio y línea de crisis en Oakland.",
+    "counties": [
+      "alameda"
+    ],
+    "phone": "(510) 536-7233",
+    "url": "https://www.asafeplace.org/",
+    "hours": "24/7",
+    "notes": "Oakland 24-hour crisis shelter and emergency line, plus counseling and legal services.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.asafeplace.org/"
+  },
+  {
+    "id": "family-violence-law-center",
+    "name": "Family Violence Law Center",
+    "type": "hotline",
+    "blurb": "Crisis line, safety planning and free legal help.",
+    "blurbEs": "Línea de crisis, plan de seguridad y ayuda legal gratis.",
+    "counties": [
+      "alameda"
+    ],
+    "phone": "1-800-947-8301",
+    "url": "https://fvlc.org/",
+    "hours": "24/7",
+    "languages": [
+      "Any language via interpreter"
+    ],
+    "notes": "24/7 crisis line for safety planning, referrals and emergency relocation help, plus legal services for DV survivors.",
+    "lastVerified": "2026-11-06",
+    "source": "https://fvlc.org/crisis-intervention/"
+  },
+  {
+    "id": "save-fremont",
+    "name": "SAVE – Safe Alternatives to Violent Environments",
+    "type": "shelter",
+    "blurb": "Fremont shelter and crisis line.",
+    "blurbEs": "Refugio y línea de crisis en Fremont.",
+    "counties": [
+      "alameda"
+    ],
+    "phone": "(510) 794-6055",
+    "url": "https://save-dv.org/",
+    "hours": "24/7",
+    "languages": [
+      "Any language via interpreter"
+    ],
+    "notes": "Fremont-based 24-hour crisis line, Safe House shelter, counseling and walk-in Empowerment Center.",
+    "lastVerified": "2026-11-06",
+    "source": "https://save-dv.org/24-hour-crisis-line/"
+  },
+  {
+    "id": "restorative-pathways",
+    "name": "Restorative Pathways (formerly Ruby's Place)",
+    "type": "shelter",
+    "blurb": "Shelter and housing help.",
+    "blurbEs": "Refugio y ayuda con vivienda.",
+    "counties": [
+      "alameda"
+    ],
+    "phone": "1-888-339-7233",
+    "url": "https://restorativepathways.org/",
+    "hours": "24/7",
+    "notes": "24/7 support line; shelter, short-term residence and housing assistance for DV and trafficking survivors.",
+    "lastVerified": "2026-11-06",
+    "source": "https://restorativepathways.org/"
+  },
+  {
+    "id": "narika",
+    "name": "Narika",
+    "type": "counseling",
+    "blurb": "Help for South Asian survivors.",
+    "blurbEs": "Ayuda para sobrevivientes del sur de Asia.",
+    "counties": [
+      "alameda"
+    ],
+    "phone": "1-800-215-7308",
+    "url": "https://www.narika.org/",
+    "hours": "Mon–Fri 8am–8pm",
+    "notes": "Helpline for South Asian and other survivors: case management, emergency safe nights, legal support and transitional housing.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.narika.org/"
+  },
+  {
+    "id": "alameda-county-family-justice-center",
+    "name": "Alameda County Family Justice Center",
+    "type": "legal",
+    "blurb": "Oakland walk-in center: advocates and legal help.",
+    "blurbEs": "Centro en Oakland: apoyo y ayuda legal.",
+    "counties": [
+      "alameda"
+    ],
+    "phone": "(510) 267-8800",
+    "url": "https://www.acfjc.org/",
+    "hours": "Mon–Fri 8:30am–5pm",
+    "notes": "One-stop center in Oakland with navigators, law-enforcement liaison and a legal advice clinic for DV survivors.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.acfjc.org/"
+  },
+  {
+    "id": "stand-for-families",
+    "name": "STAND! For Families Free of Violence",
+    "type": "hotline",
+    "blurb": "Contra Costa crisis line and restraining order help.",
+    "blurbEs": "Línea de crisis y ayuda con órdenes de restricción.",
+    "counties": [
+      "contra-costa"
+    ],
+    "phone": "1-888-215-5555",
+    "url": "https://www.standffov.org/",
+    "hours": "24/7",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "notes": "24/7 hotline advocates, support groups and DV restraining order help by appointment.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.standffov.org/help-for-myself/"
+  },
+  {
+    "id": "contra-costa-family-justice-center",
+    "name": "Contra Costa Family Justice Center",
+    "type": "legal",
+    "blurb": "Walk-in centers with legal help.",
+    "blurbEs": "Centros sin cita con ayuda legal.",
+    "counties": [
+      "contra-costa"
+    ],
+    "phone": "(925) 521-6366",
+    "url": "https://www.cocofamilyjustice.org/",
+    "hours": "Mon–Fri 9am–5pm (after hours call 211)",
+    "notes": "Navigation, trauma recovery and legal help; centers in Concord, Richmond (510) 974-7200, Antioch (925) 281-0970 and Danville (925) 486-0100.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.cocofamilyjustice.org/"
+  },
+  {
+    "id": "solano-family-justice-center",
+    "name": "Solano Family Justice Center",
+    "type": "legal",
+    "blurb": "Fairfield walk-in center for survivors.",
+    "blurbEs": "Centro en Fairfield para sobrevivientes.",
+    "counties": [
+      "solano"
+    ],
+    "phone": "(707) 784-7635",
+    "url": "https://www.cocofamilyjustice.org/",
+    "hours": "Mon–Fri 9am–5pm (after hours call 211)",
+    "notes": "Fairfield center offering navigation and support for survivors of DV, sexual assault and abuse.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.cocofamilyjustice.org/"
+  },
+  {
+    "id": "cora",
+    "name": "CORA – Community Overcoming Relationship Abuse",
+    "type": "shelter",
+    "blurb": "San Mateo crisis line, shelter and legal help.",
+    "blurbEs": "Línea de crisis, refugio y ayuda legal en San Mateo.",
+    "counties": [
+      "san-mateo"
+    ],
+    "phone": "1-800-300-1080",
+    "url": "https://www.corasupport.org/",
+    "hours": "24/7",
+    "notes": "24/7 hotline, safe housing, counseling, LGBTQ+ support and legal services including representation.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.corasupport.org/"
+  },
+  {
+    "id": "legal-aid-san-mateo",
+    "name": "Legal Aid Society of San Mateo County",
+    "type": "legal",
+    "blurb": "Free legal help, including restraining orders.",
+    "blurbEs": "Ayuda legal gratis, incluso órdenes de restricción.",
+    "counties": [
+      "san-mateo"
+    ],
+    "phone": "(650) 558-0915",
+    "url": "https://legalaidsmc.org/",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "notes": "Free legal aid with a domestic violence practice area; call to ask about restraining order help. Office line, not a crisis line.",
+    "lastVerified": "2026-11-06",
+    "source": "https://legalaidsmc.org/"
+  },
+  {
+    "id": "next-door-solutions",
+    "name": "Next Door Solutions to Domestic Violence",
+    "type": "shelter",
+    "blurb": "San José shelter and crisis line.",
+    "blurbEs": "Refugio y línea de crisis en San José.",
+    "counties": [
+      "santa-clara"
+    ],
+    "phone": "(408) 279-2962",
+    "url": "https://www.nextdoorsolutions.org/",
+    "hours": "24/7",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "notes": "24/7 hotline, emergency shelter, safety planning and restraining-order support.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.nextdoorsolutions.org/"
+  },
+  {
+    "id": "ywca-golden-gate-silicon-valley",
+    "name": "YWCA Golden Gate Silicon Valley",
+    "type": "hotline",
+    "blurb": "Bilingual crisis line and emergency housing.",
+    "blurbEs": "Línea de crisis bilingüe y vivienda de emergencia.",
+    "counties": [
+      "santa-clara"
+    ],
+    "phone": "1-800-572-2782",
+    "url": "https://yourywca.org/support-line/",
+    "hours": "24/7",
+    "languages": [
+      "Bilingual"
+    ],
+    "notes": "24/7 bilingual support line for DV, sexual assault and trafficking survivors, with safety planning and emergency housing screening.",
+    "lastVerified": "2026-11-06",
+    "source": "https://yourywca.org/support-line/"
+  },
+  {
+    "id": "aaci-asian-womens-home",
+    "name": "AACI Asian Women's Home",
+    "type": "shelter",
+    "blurb": "Shelter and crisis line, with language support.",
+    "blurbEs": "Refugio y línea de crisis, con apoyo de idiomas.",
+    "counties": [
+      "santa-clara"
+    ],
+    "phone": "(408) 975-2739",
+    "url": "https://www.aaci.org/",
+    "hours": "24/7",
+    "notes": "24/7 DV hotline and shelter; call to ask about language support.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.aaci.org/"
+  },
+  {
+    "id": "maitri",
+    "name": "Maitri",
+    "type": "counseling",
+    "blurb": "Help for South Asian survivors.",
+    "blurbEs": "Ayuda para sobrevivientes del sur de Asia.",
+    "counties": [
+      "santa-clara"
+    ],
+    "phone": "1-888-862-4874",
+    "url": "https://www.maitri.org/",
+    "hours": "Mon–Fri 9am–3pm; voicemail returned within about a day",
+    "languages": [
+      "English",
+      "Hindi",
+      "Punjabi",
+      "Gujarati",
+      "Bengali",
+      "Telugu",
+      "Tamil",
+      "Urdu",
+      "Marathi",
+      "Malayalam",
+      "Kannada",
+      "Nepali",
+      "Sinhala",
+      "Sindhi",
+      "Farsi"
+    ],
+    "notes": "Helpline for South Asian survivors: safety planning, peer counseling, restraining-order paperwork help, court accompaniment and housing.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.maitri.org/get-help"
+  },
+  {
+    "id": "community-solutions",
+    "name": "Community Solutions",
+    "type": "hotline",
+    "blurb": "Crisis line for Gilroy and Morgan Hill.",
+    "blurbEs": "Línea de crisis para Gilroy y Morgan Hill.",
+    "counties": [
+      "santa-clara"
+    ],
+    "phone": "1-877-363-7238",
+    "url": "https://www.communitysolutions.org/",
+    "hours": "24/7",
+    "notes": "24-hour crisis line for intimate partner violence, sexual assault and trafficking, serving South Santa Clara County (Gilroy, Morgan Hill).",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.communitysolutions.org/"
+  },
+  {
+    "id": "center-for-domestic-peace",
+    "name": "Center for Domestic Peace",
+    "type": "shelter",
+    "blurb": "Marin bilingual crisis line and housing.",
+    "blurbEs": "Línea de crisis bilingüe y vivienda en Marin.",
+    "counties": [
+      "marin"
+    ],
+    "phone": "(415) 924-6616",
+    "url": "https://www.centerfordomesticpeace.org/",
+    "hours": "24/7",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "notes": "24-hour bilingual hotline, housing programs, legal system advocacy, therapy and support groups.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.centerfordomesticpeace.org/"
+  },
+  {
+    "id": "safequest-solano",
+    "name": "SafeQuest Solano",
+    "type": "shelter",
+    "blurb": "Solano crisis line and safe housing.",
+    "blurbEs": "Línea de crisis y vivienda segura en Solano.",
+    "counties": [
+      "solano"
+    ],
+    "phone": "1-866-487-7233",
+    "text": "Text (707) 237-8397 (Mon–Fri 8am–4pm)",
+    "url": "https://www.safequestsolano.org/",
+    "hours": "24/7",
+    "languages": [
+      "Bilingual"
+    ],
+    "notes": "24/7 crisis line, safe housing, restraining orders, court accompaniment and counseling.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.safequestsolano.org/"
+  },
+  {
+    "id": "napa-news",
+    "name": "NEWS (Napa Emergency Women's Services)",
+    "type": "shelter",
+    "blurb": "Napa crisis line and advocates.",
+    "blurbEs": "Línea de crisis y apoyo en Napa.",
+    "counties": [
+      "napa"
+    ],
+    "phone": "(707) 255-6397",
+    "url": "https://www.napanews.org/",
+    "hours": "24/7",
+    "notes": "Free, confidential 24/7 help line for Napa County with crisis support, advocacy and youth/family services.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.napanews.org/"
+  },
+  {
+    "id": "ywca-sonoma-county",
+    "name": "YWCA Sonoma County",
+    "type": "shelter",
+    "blurb": "Sonoma crisis line and safe house.",
+    "blurbEs": "Línea de crisis y casa segura en Sonoma.",
+    "counties": [
+      "sonoma"
+    ],
+    "phone": "(707) 546-1234",
+    "url": "https://ywca-sonoma.squarespace.com/dv-services",
+    "hours": "24/7",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "notes": "24/7 DV hotline, confidential Safe House shelter, court accompaniment and support groups.",
+    "lastVerified": "2026-11-06",
+    "source": "https://ywca-sonoma.squarespace.com/dv-services"
+  },
+  {
+    "id": "family-justice-center-sonoma",
+    "name": "Family Justice Center Sonoma County",
+    "type": "legal",
+    "blurb": "Santa Rosa walk-in center: legal and immigration help.",
+    "blurbEs": "Centro en Santa Rosa: ayuda legal y de inmigración.",
+    "counties": [
+      "sonoma"
+    ],
+    "phone": "(707) 565-8255",
+    "url": "https://www.fjcsc.org/",
+    "hours": "Mon–Fri 8:30am–4:30pm",
+    "notes": "Walk-in center in Santa Rosa with advocacy, legal and immigration services, safety planning and safe house access.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.fjcsc.org/"
+  },
+  {
+    "id": "legal-aid-sonoma-county",
+    "name": "Legal Aid of Sonoma County",
+    "type": "legal",
+    "blurb": "Help with restraining order paperwork.",
+    "blurbEs": "Ayuda con los papeles de órdenes de restricción.",
+    "counties": [
+      "sonoma"
+    ],
+    "phone": "(707) 542-1290",
+    "url": "https://www.sonoma.courts.ca.gov/self-help/community-services",
+    "notes": "Helps with restraining order paperwork; call for an appointment.",
+    "lastVerified": "2026-11-06",
+    "source": "https://www.sonoma.courts.ca.gov/self-help/community-services"
+  },
+  {
+    "id": "bay-area-legal-aid",
+    "name": "Bay Area Legal Aid (BayLegal)",
+    "type": "legal",
+    "blurb": "Free legal help: restraining orders, custody, immigration.",
+    "blurbEs": "Ayuda legal gratis: órdenes, custodia, inmigración.",
+    "counties": [
+      "alameda",
+      "contra-costa",
+      "marin",
+      "napa",
+      "san-francisco",
+      "san-mateo",
+      "santa-clara"
+    ],
+    "phone": "1-800-551-5554",
+    "url": "https://baylegal.org/legal-areas/domestic-violence/",
+    "notes": "Free legal advice line for qualifying low-income residents: restraining order clinics and representation, custody and VAWA immigration help. Not a crisis line.",
+    "lastVerified": "2026-11-06",
+    "source": "https://baylegal.org/legal-areas/domestic-violence/"
+  }
+]

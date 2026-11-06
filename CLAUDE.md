@@ -101,7 +101,22 @@ Both modes include matched Bay Area resources (from the curated list only) and a
 ## Claude API
 - Server-side only in a Next.js Route Handler: `app/api/plan/route.ts`. Key in
   `ANTHROPIC_API_KEY` (Vercel env var); never exposed to the client.
-- SDK: `@anthropic-ai/sdk`. Model: `claude-sonnet-5-5` (fast; upgrade to `claude-opus-5-5` if quality needs it).
+- SDK: `@anthropic-ai/sdk`. Model: `claude-opus-5-5` at effort `low` for chat turns and translation (speed), with server-side
+  `fallbacks: "default"` (beta `server-side-fallback-2026-07-01`) so a classifier refusal on
+  sensitive content retries on another model instead of failing.
+- Each situation is an ongoing chat (saved encrypted, wiped by the panic code). `lib/topics.ts` is
+  a deterministic, ordered safety-planning checklist (safe to talk now, city, lives with him, kids, how safe she feels, phone safety, trusted person, money/transport, documents, pets, language/immigration help offered, help tried). Every question must change the plan; it never asks about the abuse itself, health/medical details, addresses, or immigration status (trauma-informed; risk info goes into the plan instead of being asked). Each turn the route tells Claude what's known and the next
+  gaps; Claude phrases one question at a time, records what she revealed per topic ("declined" =
+  never re-ask), and holds the first plan until the essentials are known (unless danger or she asks).
+  Each plan step and chat reply carries `contacts` (vetted resource ids or "911"); the client renders
+  Call/Text buttons from the vetted data. She can edit the plan directly (Edit on My plan) or by chatting; the
+  route sends her edits and checked-off steps back as context. Switching EN/ES translates the plan via
+  `app/api/plan/translate/route.ts`. Claude infers her county from
+  the city and her goal (leave-now | leave-soon | preparing | exploring | stay-safer), and returns a
+  full updated plan whenever it has enough or something changes. She corrects the goal by chatting.
+- Resources are matched by Claude from what she writes (she never has to search). It may only
+  pick ids from `data/resources.bay-area.json`; the route drops unknown ids.
+- `PLAN_MOCK=1` in `.env.local` returns a sample plan without calling Claude (dev only).
 - System prompt includes the curated resource list and rules: trauma-informed, non-judgmental,
   plain language, triage danger level first, **only cite resources from the provided list —
   never invent names, phone numbers, or URLs**, not legal/medical advice.
@@ -136,8 +151,15 @@ app/api/plan/route.ts     Claude call
 components/game/          GameShell (tabs), Maze, Rewards (redeem-code field), Profile, Setup
 lib/maze.ts               maze generation + movement (seeded per level)
 lib/gameProgress.ts       non-sensitive game progress store (pf_progress)
-components/hidden/        HowItWorks, SituationForm, PlanView, QuickExit
-lib/crypto.ts             codes, invite code, PBKDF2 + AES-GCM, Clear-code wipe
+lib/crypto.ts             codes, invite code, PBKDF2 + AES-GCM save ("pf_save"), Clear-code wipe
+components/hidden/        HiddenApp (bottom tabs: My plan · Talk · Record; SOS + Exit in the header),
+                          PlanView (next step leads, then the checklist), Chat (one ongoing thread),
+                          Log (encrypted incident log → DV-100 draft), Emergency (SOS screen), HowItWorks
+lib/vault.ts              encrypted photo/voice notes in IndexedDB, using the session key from crypto.ts
+lib/topics.ts             ordered safety-planning checklist the chat works through
+lib/plan-schema.ts        zod schema for Claude's structured output
+lib/prompt.ts             system prompt (voice, triage, vetted-resources rule)
+lib/i18n.ts               hidden-layer strings, English + Spanish
 lib/quickExit.ts          Esc + shake listeners
 data/resources.bay-area.json
 ```
@@ -169,6 +191,10 @@ git push -u origin feat/<thing>         # open PR, partner skims, merge
 - After a merge, the other person immediately rebases on `main`.
 - Announce before editing shared files (`app/page.tsx`, `package.json`, `lib/types.ts`).
 - Resolve conflicts together on a call.
+
+## Hidden-layer UX rules
+- One ongoing chat and one plan (no list of conversations). Few words: no hints or subtitles;
+  details are collapsed until tapped. "Start over" needs a second tap.
 
 ## Non-goals (prototype)
 Accounts, multi-device sync, regions outside the Bay Area, chat history, push notifications.
