@@ -1,92 +1,83 @@
 # Path Finder
 
-A mobile web app that looks like a simple maze game. Behind a code, it holds a private tool
-that helps people experiencing intimate partner violence in the **San Francisco Bay Area** build
-a personalized safety plan, with resources that have been checked.
+A maze game on the outside. A private safety-planning tool on the inside.
 
-Hackathon prototype. `CLAUDE.md` has the full product spec, threat model and architecture.
-`DESIGN.md` has the visual system, and `PRODUCT.md` covers users and voice.
+## The problem
 
-## How it works
+Leaving an abusive partner is the most dangerous time in an abusive relationship, and it takes planning:
+where to go, who to call, what to bring, and how to do it without being noticed. But the person who
+needs that plan is often on a phone her partner checks. A search for "domestic violence shelter",
+a hotline in her call log, or a safety app on her home screen can put her at greater risk.
 
-**Layer 1: the game.** A real, playable maze with levels, coins, Rewards and a Profile. On the
-surface it's just a quiet puzzle game: the name, icon, title and history all say "Path Finder",
-and there is only one URL (`/`).
+Help exists, but it's scattered across dozens of Bay Area organizations, each with its own hours,
+rules and waitlists. Working out which ones fit her situation (her city, her kids, her pets, her
+language, whether she's in danger tonight or planning for next month) takes time and privacy she
+may not have.
 
-**Layer 2: the private space.** It opens when she redeems **My code** under Rewards → *Redeem a code*.
-- **Talk:** one ongoing chat. Claude asks one gentle question at a time (city, kids, phone safety,
-  money, documents…), never about the abuse itself, and builds the plan from what she shares.
-- **My plan:** the next step first, then the checklist (Now · Today · This week). Each step has
-  Call/Text buttons for resources from the curated list. She can edit or check off steps.
-- **Document:** a private incident log with photos and voice notes, which can be turned into a
-  draft for a restraining order (form DV-100).
-- **SOS:** call or text 911, text 911 her location, and 24/7 hotlines. No AI involved.
-- **English and Spanish**, including translating the plan.
+## The solution
 
-**Codes**
-| Code | What it does | What an onlooker sees |
+**Path Finder** looks and plays like an ordinary maze game. Anyone who picks up her phone sees a
+puzzle game called Path Finder, with levels, coins and a rewards screen.
+
+Behind a code, redeemed like a promo code in the game, is a private space where she can talk
+through what's going on in her own words. It turns that into a personal, step-by-step safety plan
+with resources in the San Francisco Bay Area that have been checked. It's calm, plain-spoken and
+at her pace, and it's never more than one tap away from looking like a game again.
+
+## Features
+
+### A real game as cover
+- A genuinely playable maze with levels, a timer, coins, rewards and a player profile.
+- Nothing on the home screen, tab title, icon or browser history suggests anything else.
+
+### Two codes
+| Code | What it does | What anyone watching sees |
 |---|---|---|
-| Invite code `NEWPATH` | Opens setup on a fresh device (advocates hand it out) | Game account setup |
-| My code | Opens the private space | Nothing: the game is replaced |
-| Clear code | Erases everything saved in the private space | "Code redeemed! +200 coins" |
+| **My code** | Opens the private space | Nothing: the game is replaced |
+| **Clear code** | Erases everything saved in the private space | "Code redeemed! +200 coins" |
 
-**Leaving fast:** the **Exit** button, **Esc**, or shaking the phone returns to the maze instantly
-and locks the private space.
+Setup happens in the game with an invite code an advocate can give her. She chooses both codes
+and practices the Clear code safely before it counts.
 
-**Privacy:** there are no accounts and no server database. Everything is encrypted on the phone
-(PBKDF2 → AES-GCM) with a key that exists only in memory while the private space is open. The
-server doesn't store or log what she types. There are no analytics or third-party scripts.
+### Leave in an instant
+- An **Exit** button always on screen, the **Esc** key, or a **shake** of the phone.
+- Each one returns to the maze immediately and locks everything behind it.
 
-## Run locally
+### Talk, don't fill out forms
+- One ongoing conversation. She can share as much or as little as she wants.
+- It asks one gentle question at a time (her city, kids, pets, phone safety, money, documents) and
+  never asks her to describe the abuse.
+- If she's in danger right now, it leads with 911, getting somewhere safe and 24/7 hotlines.
 
-```bash
-npm install
-cp .env.example .env.local   # add ANTHROPIC_API_KEY
-npm run dev                  # http://localhost:3000
-```
+### A plan that's hers
+- **Next step first**, then a checklist grouped into *Now · Today · This week*.
+- Shelter waitlists to join now, even before she's ready to leave.
+- A **go-bag checklist**: IDs, birth certificates, medications, cash, chargers, kids' documents.
+- She can check off steps, edit them herself, or change the plan just by saying so.
 
-`PLAN_MOCK=1` in `.env.local` returns a sample plan without calling Claude.
+### Resources that have been checked
+- Every organization, phone number and link comes from a hand-curated Bay Area list. Nothing is
+  made up.
+- Matched to her situation: whether they take kids, take pets, or offer help in Spanish or
+  with immigration questions.
+- **Call** and **Text** buttons on every resource. Quiet options (text and chat) come first if her
+  partner might be nearby.
 
-### Demo shortcuts (dev server only)
-- **`/demo`** shows the app inside a phone frame, for screen recording on a laptop.
-- **`DEV`** in Rewards → *Redeem a code* opens the private space without setup. The first time,
-  it shows how the codes and Exit work; after that it goes straight to My plan. **`DEVCLEAR`** is
-  its Clear code. `DEV` replaces any codes set up in that browser, and both are removed from
-  production builds.
+### Keep a private record
+- A dated log of what happened, with photos and voice notes.
+- It can turn the log into a draft for a California restraining order (form DV-100).
 
-Full flow for a demo: Rewards → `NEWPATH` → set My code and Clear code → practice the Clear code →
-redeem My code → talk → see the plan → Exit.
+### SOS
+- One tap to **call or text 911**, or **text 911 her location**.
+- 24/7 hotlines, right there with no AI in the way.
 
-## Stack
-Next.js 16 (App Router), TypeScript, Tailwind v4 and the Anthropic SDK (`/api/plan`,
-`/api/plan/translate`, `/api/declaration`). It's an installable PWA, deployed on Vercel.
+### Private by design
+- No accounts, no sign-up.
+- Everything she writes is encrypted and saved only on her phone, locked with her code.
+- Nothing she types is stored on a server. No ads, no tracking, no analytics.
 
-```
-app/page.tsx            the single route: switches between the game and the private space in state
-app/api/                Claude routes (server-side only; key in ANTHROPIC_API_KEY)
-app/demo/               phone frame for recording
-components/game/        maze, Rewards (redeem field), Profile, Setup
-components/hidden/      HiddenApp, Chat, PlanView, Log, Emergency, HowItWorks
-lib/crypto.ts           codes + encrypted save; lib/vault.ts encrypted media
-lib/prompt.ts, lib/topics.ts, lib/plan-schema.ts   how Claude is guided and what it returns
-data/resources.bay-area.json   resources Claude can cite (built from safeescape-corpus/)
-```
+### English and Spanish
+- The whole private space switches language with one tap, plan included.
 
-Resources come from `safeescape-corpus/`. Rebuild them with
-`node --env-file=.env.local scripts/import-corpus.mjs`. Claude may only cite ids from this list,
-and the app looks up names, numbers and links from it, so they can't be invented.
-
-## Install as a web app
-Deploy to Vercel (HTTPS), then:
-- **iPhone (Safari):** Share → Add to Home Screen
-- **Android (Chrome):** menu → Install app
-
-The service worker only registers in production builds (`npm run build && npm start`).
-
-## Known limitations
-- Whoever opens the app first could set the codes.
-- Someone with the device and developer tools could see that encrypted data exists.
-- Claude can be wrong. The plan always shows 911 and the National DV Hotline
-  (1-800-799-7233, text START to 88788).
-- Not legal or medical advice. Before real use it needs review by DV advocates, a security
-  review and an accessibility pass.
+*If you or someone you know is in danger, call 911. The National Domestic Violence Hotline is
+available 24/7 at 1-800-799-7233, or text START to 88788.*
