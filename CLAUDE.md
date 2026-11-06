@@ -98,8 +98,32 @@ data/resources.bay-area.json
 ```
 
 ## Team workflow
-Two contributors. `main` is the shared base; do work on feature branches
-(e.g. `feat/maze-game`, `feat/hidden-layer`) and merge via pull requests.
+Two contributors working in parallel. `main` is the shared base and must always run (demo-ready).
+
+**Setup (once)**
+- Repo owner adds the partner as a collaborator (GitHub → Settings → Collaborators).
+- One person scaffolds the Next.js app on `main` and pushes it *before* anyone branches.
+- `.env.local` stays out of git; share `ANTHROPIC_API_KEY` privately.
+- Connect the repo to Vercel so every branch/PR gets a preview URL.
+
+**Split by area to avoid conflicts**
+- Person A: maze game, Profile/Setup, passcode + panic logic (`components/game/`, `lib/crypto.ts`).
+- Person B: hidden layer, `/api/plan`, resources data (`components/hidden/`, `app/api/`, `data/`).
+- Agree on shared contracts early in `lib/types.ts`: plan JSON schema, resource schema, and the
+  layer-switch interface between game and hidden layer.
+
+**Daily loop**
+```
+git checkout main && git pull
+git checkout -b feat/<thing>            # short-lived branch
+# commit often
+git pull --rebase origin main           # pick up partner's work frequently
+git push -u origin feat/<thing>         # open PR, partner skims, merge
+```
+- Merge small PRs every few hours; never one big merge at the end.
+- After a merge, the other person immediately rebases on `main`.
+- Announce before editing shared files (`app/page.tsx`, `package.json`, `lib/types.ts`).
+- Resolve conflicts together on a call.
 
 ## Non-goals (prototype)
 Accounts, multi-device sync, regions outside the Bay Area, chat history, push notifications.
