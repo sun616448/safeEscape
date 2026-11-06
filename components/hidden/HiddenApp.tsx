@@ -23,6 +23,8 @@ type Props = {
   session: Session | null;
   /** Opening screen override: "about" on first visit, "plan" for the dev code. */
   startOn?: "about" | "plan";
+  /** Development only: the dev codes, shown on "How this works". */
+  devCodes?: { myCode: string; clearCode: string };
   /** Called on every change so the caller can re-encrypt and save. */
   onChange: (state: SavedState) => void;
   /** Return to the game and lock. Caller must drop decrypted state. */
@@ -51,7 +53,7 @@ const TAB_ICONS: Record<Tab, React.ReactNode> = {
   ),
 };
 
-export default function HiddenApp({ initialState, session, startOn, onChange, onExit }: Props) {
+export default function HiddenApp({ initialState, session, startOn, devCodes, onChange, onExit }: Props) {
   const [state, setState] = useState<SavedState>(initialState);
   // Open where she'll most likely want to be: her plan if she has one, otherwise the chat.
   const [view, setView] = useState<View>(startOn ?? (initialState.situation.plan ? "plan" : "talk"));
@@ -183,7 +185,7 @@ export default function HiddenApp({ initialState, session, startOn, onChange, on
         }`}
       >
         {view === "help" && <Emergency county={s.county} t={t} locale={state.locale} onAbout={() => go("about")} />}
-        {view === "about" && <HowItWorks t={t} onClose={() => go(lastTab)} />}
+        {view === "about" && <HowItWorks t={t} codes={devCodes} onClose={() => go(lastTab)} />}
 
         {view === "plan" &&
           (s.plan ? (

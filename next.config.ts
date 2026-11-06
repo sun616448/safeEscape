@@ -18,7 +18,8 @@ const nextConfig: NextConfig = {
         source: "/(.*)",
         headers: [
           { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "X-Frame-Options", value: "DENY" },
+          // SAMEORIGIN: other sites still can't frame the app; our own /demo phone frame can.
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
           // Don't leak our URL to any site the user follows a link to.
           { key: "Referrer-Policy", value: "no-referrer" },
         ],
