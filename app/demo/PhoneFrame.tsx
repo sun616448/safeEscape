@@ -42,7 +42,7 @@ export default function PhoneFrame() {
   }, []);
 
   return (
-    <main className="hl grid min-h-dvh place-items-center overflow-hidden">
+    <main className="hl grid min-h-dvh place-items-center overflow-hidden !bg-[var(--hl-surface)]">
       <div style={{ width: FRAME_W * scale, height: FRAME_H * scale }}>
         <div
           className="relative origin-top-left rounded-[58px] bg-[#111216] ring-1 ring-black/40"
