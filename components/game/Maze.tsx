@@ -97,16 +97,18 @@ export default function Maze({ level, onComplete }: Props) {
   };
 
   const pad = 0.5;
+  const route = trail.map((p) => `${p.x + 0.5} ${p.y + 0.5}`).join(" L");
+  const big = maze.cols > 12;
 
   return (
     <div className="flex w-full flex-col items-center gap-4">
-      <div className="flex w-full items-center justify-between text-sm text-pf-ink/70 tabular-nums">
+      <div className="f-label flex w-full items-center justify-between tabular-nums text-[var(--hl-muted)]">
         <span>Moves {moves}</span>
         <span>{formatTime(elapsed)}</span>
       </div>
 
       <div
-        className="w-full touch-none select-none rounded-2xl bg-pf-cream p-2 shadow-[0_1px_0_#0000000d,0_8px_24px_-12px_#24524e55]"
+        className="w-full touch-none select-none rounded-[var(--hl-radius)] bg-[var(--hl-surface)] p-2"
         onPointerDown={onPointerDown}
         onPointerUp={onPointerUp}
         onPointerCancel={() => (swipeFrom.current = null)}
@@ -117,39 +119,41 @@ export default function Maze({ level, onComplete }: Props) {
           role="img"
           aria-label={`Maze, level ${level}. Use arrow keys, swipe, or the buttons to move.`}
         >
-          {trail.map((p, i) => (
-            <rect
-              key={i}
-              x={p.x + 0.3}
-              y={p.y + 0.3}
-              width={0.4}
-              height={0.4}
-              rx={0.2}
-              className="fill-pf-gold/30"
-            />
-          ))}
-          <rect
-            x={goal.x + 0.18}
-            y={goal.y + 0.18}
-            width={0.64}
-            height={0.64}
-            rx={0.14}
-            className="fill-pf-teal/15 stroke-pf-teal"
-            strokeWidth={0.08}
+          {/* The way she has walked, in route blue. */}
+          <path
+            d={`M${route}`}
+            fill="none"
+            stroke="var(--hl-brand)"
+            strokeOpacity={0.55}
+            strokeWidth={big ? 0.2 : 0.24}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          {/* Goal: a hollow ring. */}
+          <circle
+            cx={goal.x + 0.5}
+            cy={goal.y + 0.5}
+            r={0.27}
+            fill="none"
+            stroke="var(--hl-brand)"
+            strokeWidth={big ? 0.08 : 0.1}
           />
           <path
             d={walls}
             fill="none"
-            className="stroke-pf-teal"
-            strokeWidth={maze.cols > 12 ? 0.14 : 0.18}
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            stroke="var(--hl-ink)"
+            strokeWidth={big ? 0.12 : 0.15}
+            strokeLinecap="square"
+            strokeLinejoin="miter"
           />
+          {/* Player: the gold dot with a paper ring and a blue ring. */}
           <g
             style={{ transform: `translate(${pos.x}px, ${pos.y}px)` }}
             className="transition-transform duration-150 ease-out motion-reduce:transition-none"
           >
-            <circle cx={0.5} cy={0.5} r={0.3} className="fill-pf-gold stroke-pf-teal-dark" strokeWidth={0.05} />
+            <circle cx={0.5} cy={0.5} r={0.34} fill="var(--hl-brand)" />
+            <circle cx={0.5} cy={0.5} r={0.28} fill="var(--hl-surface)" />
+            <circle cx={0.5} cy={0.5} r={0.22} fill="var(--hl-accent)" />
           </g>
         </svg>
       </div>
@@ -161,7 +165,7 @@ export default function Maze({ level, onComplete }: Props) {
 
 function DPad({ onMove, disabled }: { onMove: (d: Dir) => void; disabled: boolean }) {
   const btn =
-    "flex h-14 w-14 items-center justify-center rounded-xl bg-pf-teal text-pf-cream shadow-sm active:bg-pf-teal-dark disabled:opacity-40";
+    "flex size-14 items-center justify-center rounded-[var(--hl-radius)] bg-[var(--hl-brand)] text-[var(--hl-brand-ink)] active:bg-[var(--hl-brand-dk)] disabled:opacity-40";
   const arrow = (rotate: number) => (
     <svg viewBox="0 0 24 24" className="h-6 w-6" style={{ transform: `rotate(${rotate}deg)` }} aria-hidden>
       <path d="M12 5l7 8H5z" fill="currentColor" />
