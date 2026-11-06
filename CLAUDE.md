@@ -127,10 +127,14 @@ Both modes include matched Bay Area resources (from the curated list only) and a
 - Do not log request bodies. Basic rate limiting per IP.
 
 ## Resources data
-- `data/resources.bay-area.json`: vetted entries `{ id, name, type (hotline|shelter|legal|
-  counseling|housing|other), counties[], phone, text, url, hours, languages[], notes }`.
-- Hand-curated, with a `lastVerified` date. Include e.g. National DV Hotline, county DV
-  agencies/shelters, legal aid orgs. Verify every number/URL before demo.
+- Source of truth is the team corpus in `safeescape-corpus/` (edit `build.py` there, run `python3 -I build.py`).
+- `node --env-file=.env.local scripts/import-corpus.mjs` turns `safeescape-corpus/resources.json` (75 entries;
+  focus counties SF, San Mateo, Santa Clara) into `data/resources.bay-area.json` (the app's `Resource` shape, with
+  quiet channels, kids/pets/citizenship constraints, topics, when-to-use, verification flags). Spanish card
+  one-liners are cached in `data/blurbs.es.json`.
+- The system prompt lists every resource in the corpus one-line format and uses the corpus rules (partner nearby →
+  quiet channels; Y/?/N constraints; flagged → "confirm when you call"; no shelter locations; honest gaps) and the
+  phases in `safeescape-corpus/leaving_plan.json` as the plan structure.
 
 ## Stack
 @AGENTS.md
@@ -193,6 +197,7 @@ git push -u origin feat/<thing>         # open PR, partner skims, merge
 - Resolve conflicts together on a call.
 
 ## Hidden-layer UX rules
+- Visual system (colours, type, route, rules for the maze to match): see `DESIGN.md`.
 - One ongoing chat and one plan (no list of conversations). Few words: no hints or subtitles;
   details are collapsed until tapped. "Start over" needs a second tap.
 

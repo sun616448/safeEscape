@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { CodeResult } from "@/lib/types";
 import { grantPromo, LEVEL_COINS, useProgress } from "@/lib/gameProgress";
+import { btnPrimary, field, label } from "./styles";
 
 interface Props {
   /** See CodeResult in lib/types.ts. "unlock" means the caller already left the game. */
@@ -46,67 +47,64 @@ export default function Rewards({ onCodeSubmit, onStartSetup }: Props) {
   };
 
   return (
-    <div className="flex w-full flex-col gap-6">
-      <section className="flex items-center justify-between rounded-2xl bg-pf-teal p-5 text-pf-cream">
+    <div className="flex w-full flex-col gap-8">
+      <section className="flex items-end justify-between border-b-2 border-[var(--hl-ink)] pb-4">
         <div>
-          <p className="text-sm opacity-80">Coins</p>
-          <p className="text-3xl font-semibold tabular-nums">{progress.coins}</p>
+          <p className={label}>Coins</p>
+          <p className="f-title text-[2.75rem] leading-none tabular-nums">{progress.coins}</p>
         </div>
-        <span className="h-10 w-10 rounded-full bg-pf-gold shadow-inner" aria-hidden />
+        <svg viewBox="0 0 40 40" className="size-11" aria-hidden>
+          <circle cx="20" cy="20" r="17" fill="var(--hl-accent)" stroke="var(--hl-ink)" strokeWidth="2" />
+          <circle cx="20" cy="20" r="11" fill="none" stroke="var(--hl-ink)" strokeOpacity="0.35" strokeWidth="1.5" />
+        </svg>
       </section>
 
-      <section className="rounded-2xl bg-pf-cream p-4">
-        <form onSubmit={submit} className="flex flex-col gap-2" autoComplete="off">
-          <label htmlFor="redeem-code" className="text-sm font-medium text-pf-ink">
-            Redeem a code
-          </label>
-          <p className="text-xs text-pf-ink/60">Got a code from a friend or our newsletter? Enter it here.</p>
-          <div className="flex gap-2">
-            <input
-              id="redeem-code"
-              name="pf-redeem"
-              type="text"
-              value={code}
-              onChange={(e) => {
-                setCode(e.target.value);
-                setNotice(null);
-              }}
-              autoComplete="off"
-              autoCorrect="off"
-              autoCapitalize="off"
-              spellCheck={false}
-              enterKeyHint="go"
-              className="min-w-0 flex-1 rounded-xl border border-pf-sand bg-white px-3 py-3 text-base text-pf-ink [-webkit-text-security:disc] outline-none focus:border-pf-teal"
-            />
-            <button
-              type="submit"
-              disabled={busy}
-              className="rounded-xl bg-pf-teal px-4 py-3 text-sm font-medium text-pf-cream active:bg-pf-teal-dark disabled:opacity-50"
-            >
-              Redeem
-            </button>
-          </div>
-          <p
-            role="status"
-            className={`min-h-5 text-sm ${notice?.tone === "success" ? "font-medium text-pf-teal" : "text-pf-ink/70"}`}
-          >
-            {notice?.text}
-          </p>
-        </form>
-      </section>
+      <form onSubmit={submit} className="flex flex-col gap-2" autoComplete="off">
+        <label htmlFor="redeem-code" className="f-title text-lg">
+          Redeem a code
+        </label>
+        <p className="text-sm text-[var(--hl-muted)]">Got a code from a friend or our newsletter? Enter it here.</p>
+        <div className="mt-1 flex gap-2">
+          <input
+            id="redeem-code"
+            name="pf-redeem"
+            type="text"
+            value={code}
+            onChange={(e) => {
+              setCode(e.target.value);
+              setNotice(null);
+            }}
+            autoComplete="off"
+            autoCorrect="off"
+            autoCapitalize="off"
+            spellCheck={false}
+            enterKeyHint="go"
+            className={`${field} flex-1 [-webkit-text-security:disc]`}
+          />
+          <button type="submit" disabled={busy} className={btnPrimary}>
+            Redeem
+          </button>
+        </div>
+        <p
+          role="status"
+          className={`min-h-6 text-sm ${notice?.tone === "success" ? "font-bold text-[var(--hl-brand)]" : "text-[var(--hl-muted)]"}`}
+        >
+          {notice?.text}
+        </p>
+      </form>
 
-      <section className="flex flex-col gap-2">
-        <h2 className="text-sm font-medium text-pf-ink">Rewards history</h2>
-        <ul className="flex flex-col gap-2">
+      <section className="flex flex-col">
+        <h2 className={`${label} pb-2`}>Rewards history</h2>
+        <ul className="border-t-2 border-[var(--hl-ink)]">
           {progress.redeemed.map((r, i) => (
-            <li key={i} className="flex items-center justify-between rounded-xl bg-pf-cream px-4 py-3 text-sm">
+            <li key={i} className="flex min-h-12 items-center justify-between border-b border-[var(--hl-line)] text-base">
               <span>Promo code · {r.date}</span>
-              <span className="font-medium text-pf-teal tabular-nums">+{r.coins}</span>
+              <span className="f-btn tabular-nums text-[var(--hl-zone)]">+{r.coins}</span>
             </li>
           ))}
-          <li className="flex items-center justify-between rounded-xl bg-pf-cream px-4 py-3 text-sm">
+          <li className="flex min-h-12 items-center justify-between border-b border-[var(--hl-line)] text-base">
             <span>Levels cleared · {progress.levelsCompleted}</span>
-            <span className="font-medium text-pf-teal tabular-nums">+{progress.levelsCompleted * LEVEL_COINS}</span>
+            <span className="f-btn tabular-nums text-[var(--hl-zone)]">+{progress.levelsCompleted * LEVEL_COINS}</span>
           </li>
         </ul>
       </section>

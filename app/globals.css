@@ -1,36 +1,104 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * Path Finder: "folded road map", shared by the maze game and the hidden layer so moving
+ * between them never looks like switching apps. Warm map paper, route blue, the gold player
+ * dot as "you are here". Red is reserved for danger. See DESIGN.md.
+ */
+.hl {
+  /* day map */
+  --hl-bg: #f5e7c8; /* map paper */
+  --hl-surface: #fbf3df; /* fields, open sections: lighter paper */
+  --hl-paper-2: #ecd9b0; /* tab bar: the map's folded edge */
+  --hl-ink: #2a2a35; /* never pure black */
+  --hl-muted: #55505a;
+  --hl-line: #d9c493;
+  --hl-brand: #2f5f86; /* route blue, from the maze */
+  --hl-brand-dk: #1f4462;
+  --hl-brand-ink: #fff8e8;
+  --hl-brand-soft: #e2dfcf;
+  --hl-accent: #f2b84b; /* gold player dot */
+  --hl-zone: #8a5418; /* ochre legend labels */
+  --hl-danger: #a3242c;
+  --hl-danger-ink: #fff4e6;
+  --hl-danger-soft: #f0d2bf;
+  --hl-contour: rgba(47, 95, 134, 0.1);
+
+  --hl-font-body: var(--font-hl-body), system-ui, sans-serif;
+  --hl-font-label: var(--font-hl-label), var(--hl-font-body);
+  --hl-radius: 4px;
+  /* bottom tab bar height incl. the home indicator */
+  --hl-tabbar: calc(4.25rem + env(safe-area-inset-bottom));
+
+  background: var(--hl-bg);
+  color: var(--hl-ink);
+  font-family: var(--hl-font-body);
+  caret-color: var(--hl-brand);
+  accent-color: var(--hl-brand);
+  -webkit-tap-highlight-color: transparent;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-/* Path Finder palette (matches public/icon.svg). */
-@theme {
-  --color-pf-teal: #2f6f6a;
-  --color-pf-teal-dark: #24524e;
-  --color-pf-cream: #f4efe4;
-  --color-pf-sand: #e8dfcc;
-  --color-pf-gold: #f2b84b;
-  --color-pf-ink: #1f3836;
-}
-
+/* night map */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  .hl {
+    --hl-bg: #1d1f2a;
+    --hl-surface: #262938;
+    --hl-paper-2: #171822;
+    --hl-ink: #f1e6cc;
+    --hl-muted: #b6ad9c;
+    --hl-line: #3a3d50;
+    --hl-brand: #8ab8dc;
+    --hl-brand-dk: #b4d3ec;
+    --hl-brand-ink: #11141c;
+    --hl-brand-soft: #2b3043;
+    --hl-zone: #e3ad62;
+    --hl-danger: #ff8f80;
+    --hl-danger-ink: #2a0b0b;
+    --hl-danger-soft: #3c2022;
+    --hl-contour: rgba(138, 184, 220, 0.08);
   }
 }
 
+.hl ::selection {
+  background: var(--hl-accent);
+  color: #2a2a35;
+}
+.hl :focus-visible {
+  outline: 2px solid var(--hl-brand);
+  outline-offset: 2px;
+}
+.hl input::placeholder,
+.hl textarea::placeholder {
+  color: var(--hl-muted);
+}
+
+/* Map-legend type: condensed caps for labels, condensed bold for titles. */
+.hl .f-label {
+  font-family: var(--hl-font-label);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.hl .f-title {
+  font-family: var(--hl-font-label);
+  font-weight: 700;
+  letter-spacing: -0.005em;
+}
+.hl .f-btn {
+  font-family: var(--hl-font-label);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #f5e7c8;
+}
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background: #1d1f2a;
+  }
 }

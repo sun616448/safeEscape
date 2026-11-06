@@ -10,7 +10,17 @@ type Loc = { lat: number; lng: number; acc: number };
 
 // Instant, no-AI emergency screen. Everything here is static and vetted.
 // Location is read on the device only and goes straight into her text to 911, never to our server.
-export default function Emergency({ county, t, locale }: { county?: County; t: Strings; locale: Locale }) {
+export default function Emergency({
+  county,
+  t,
+  locale,
+  onAbout,
+}: {
+  county?: County;
+  t: Strings;
+  locale: Locale;
+  onAbout?: () => void;
+}) {
   const [status, setStatus] = useState<"idle" | "finding" | "denied">("idle");
   const [loc, setLoc] = useState<Loc | null>(null);
 
@@ -42,13 +52,13 @@ export default function Emergency({ county, t, locale }: { county?: County; t: S
       <div className="grid grid-cols-2 gap-3">
         <a
           href="tel:911"
-          className="flex min-h-20 items-center justify-center rounded-3xl bg-[var(--hl-danger)] text-xl font-bold text-[var(--hl-danger-ink)]"
+          className="f-title flex min-h-24 items-center justify-center rounded-[var(--hl-radius)] bg-[var(--hl-danger)] text-2xl text-[var(--hl-danger-ink)]"
         >
           {t.call911}
         </a>
         <a
           href="sms:911"
-          className="flex min-h-20 items-center justify-center rounded-3xl border-2 border-[var(--hl-danger)] text-xl font-bold text-[var(--hl-danger)]"
+          className="f-title flex min-h-24 items-center justify-center rounded-[var(--hl-radius)] border-[3px] border-[var(--hl-danger)] text-2xl text-[var(--hl-danger)]"
         >
           {t.text911}
         </a>
@@ -57,9 +67,9 @@ export default function Emergency({ county, t, locale }: { county?: County; t: S
       <button
         onClick={sendLocation}
         disabled={status === "finding"}
-        className="flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-[var(--hl-danger-soft)] font-semibold text-[var(--hl-danger)] disabled:opacity-60"
+        className="f-btn flex min-h-14 items-center justify-center gap-2 rounded-[var(--hl-radius)] bg-[var(--hl-danger-soft)] text-[var(--hl-danger)] disabled:opacity-60"
       >
-        <span aria-hidden>📍</span>
+        <svg className="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z" /><circle cx="12" cy="10" r="2.3" /></svg>
         {status === "finding" ? t.findingLocation : t.sendLocation}
       </button>
       {status === "denied" && <p className="px-1 text-sm font-medium text-[var(--hl-danger)]">{t.noLocation}</p>}
@@ -72,15 +82,23 @@ export default function Emergency({ county, t, locale }: { county?: County; t: S
           <span className="text-[var(--hl-muted)]"> (±{Math.round(loc.acc)} m)</span>
         </p>
       )}
-      <p className="px-1 text-[15px] leading-snug">{t.locationTip}</p>
-      <p className="px-1 text-[15px] leading-snug">{t.safePlace}</p>
+      <p className="text-base leading-relaxed">{t.locationTip}</p>
+      <p className="text-base leading-relaxed">{t.safePlace}</p>
 
-      <ul className="mt-2 flex flex-col gap-3">
+      <ul className="mt-2 border-t-2 border-[var(--hl-ink)]">
         {emergencyResources(county).map((r) => (
           <ResourceCard key={r.id} r={r} t={t} locale={locale} />
         ))}
       </ul>
-      <p className="px-1 text-xs text-[var(--hl-muted)]">{t.callLogTip}</p>
+      <p className="text-xs text-[var(--hl-muted)]">{t.callLogTip}</p>
+      {onAbout && (
+        <button
+          onClick={onAbout}
+          className="f-btn mt-2 min-h-11 self-start underline decoration-2 underline-offset-4"
+        >
+          {t.howItWorks}
+        </button>
+      )}
     </div>
   );
 }

@@ -93,22 +93,46 @@ export type PlanResponse =
 
 export type ResourceType = "hotline" | "shelter" | "legal" | "counseling" | "housing" | "other";
 
+export type ConstraintStatus = "yes" | "no" | "unknown" | "partial";
+
+/** One vetted resource. Generated from the team corpus by scripts/import-corpus.mjs. */
 export interface Resource {
   id: string;
   name: string;
   type: ResourceType;
+  /** Corpus category (hotline, shelter, legal, court_help, victim_services, family_justice_center, …). */
+  category: string;
   counties: (County | "all")[];
+  /** One short line shown on the card (en / es). */
+  blurb: string;
+  blurbEs: string;
   phone?: string;
+  is24h: boolean;
   text?: string;
   url?: string;
   hours?: string;
   languages?: string[];
-  /** One short line shown on the card (en / es). */
-  blurb: string;
-  blurbEs: string;
   notes?: string;
+  accessNote?: string;
+  whenToUse: string;
+  urgency: string[];
+  topics: string[];
+  /** Ways to reach them that work while the partner is nearby (text, chat, web_form, email, web_info). */
+  quietChannels: string[];
+  channelNotes?: string;
+  constraints: {
+    children: ConstraintStatus;
+    pets: ConstraintStatus;
+    citizenshipRequired: ConstraintStatus;
+    population?: string;
+  };
+  confidence: string;
+  /** "unverified" / "inconsistent": details may be out of date; the app says to confirm by phone. */
+  flag?: string;
+  /** In the corpus focus counties (SF, San Mateo, Santa Clara). */
+  focus: boolean;
   lastVerified: string; // YYYY-MM-DD
-  source?: string; // where the phone/URL was verified
+  source?: string;
 }
 
 /** Her ongoing situation: the chat plus the plan it has built so far. */

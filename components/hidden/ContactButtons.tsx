@@ -20,8 +20,8 @@ export default function ContactButtons({ ids, t, onDark = false }: { ids?: strin
   const primary = onDark
     ? "bg-[var(--hl-brand-ink)] text-[var(--hl-brand)]"
     : "bg-[var(--hl-brand)] text-[var(--hl-brand-ink)]";
-  const secondary = onDark ? "border border-current" : "border border-[var(--hl-brand)] text-[var(--hl-brand)]";
-  const pill = "inline-flex min-h-11 max-w-full items-center gap-2 rounded-full px-4 text-sm font-semibold";
+  const secondary = onDark ? "border-2 border-current" : "border-2 border-[var(--hl-brand)] text-[var(--hl-brand)]";
+  const pill = "f-btn inline-flex min-h-11 max-w-full items-center gap-2 rounded-[var(--hl-radius)] px-4";
 
   return (
     <div className="flex flex-wrap gap-2">
@@ -33,7 +33,7 @@ export default function ContactButtons({ ids, t, onDark = false }: { ids?: strin
                 <PhoneIcon />
                 {t.call911}
               </a>
-              <a href="sms:911" className={`${pill} border border-[var(--hl-danger)] text-[var(--hl-danger)]`}>
+              <a href="sms:911" className={`${pill} border-2 border-[var(--hl-danger)] text-[var(--hl-danger)]`}>
                 {t.text911}
               </a>
             </span>

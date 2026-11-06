@@ -1,45 +1,39 @@
 "use client";
 
-// Plain-language explanation, shown the first time she opens the hidden layer and any time
-// from "How this works". Behind the code, so it can be direct.
-// TODO(hidden layer): Spanish version; mention Esc / shake once quick exit lands.
+import type { Strings } from "@/lib/i18n";
 
-export default function HowItWorks({ onClose }: { onClose: () => void }) {
+// Plain-language explanation, shown the first time she opens the hidden layer and any time
+// from "How this works" on the SOS screen. Behind the code, so it can be direct.
+export default function HowItWorks({ t, onClose }: { t: Strings; onClose: () => void }) {
+  const rows = [
+    [t.aboutMyCode, t.aboutMyCodeText],
+    [t.aboutClearCode, t.aboutClearCodeText],
+    [t.aboutLeave, t.aboutLeaveText],
+  ];
+
   return (
-    <div className="flex flex-col gap-5 text-pf-ink">
-      <div>
-        <h2 className="text-xl font-semibold">This is your private space</h2>
-        <p className="mt-2 text-sm leading-relaxed text-pf-ink/80">
-          Path Finder looks like a maze game. This part is hidden. Here you can describe what&apos;s going
-          on and get a safety plan with Bay Area resources, at your own pace. What you save here is
-          encrypted on this phone. Nothing is stored anywhere else.
-        </p>
+    <div className="flex flex-col gap-6 pt-2">
+      <div className="flex flex-col gap-3">
+        <h1 className="f-title max-w-[16ch] text-[1.875rem] leading-[1.1] text-balance">{t.aboutTitle}</h1>
+        <p className="max-w-[60ch] text-base leading-relaxed">{t.aboutIntro}</p>
       </div>
 
-      <ul className="flex flex-col gap-3 text-sm leading-relaxed">
-        <li className="rounded-xl bg-pf-cream p-3">
-          <b>My code</b> brings you back here. Type it in the game under Rewards → Redeem a code.
-        </li>
-        <li className="rounded-xl bg-pf-cream p-3">
-          <b>Clear code</b> erases everything saved here. Anyone watching only sees &ldquo;Code redeemed!
-          +200 coins&rdquo;. Afterward, you can set up new codes with the invite code.
-        </li>
-        <li className="rounded-xl bg-pf-cream p-3">
-          <b>Leave fast:</b> tap <b>Exit</b> in the corner. You&apos;ll be back in the maze, and this space
-          locks.
-        </li>
-      </ul>
+      <dl className="border-t-2 border-[var(--hl-ink)]">
+        {rows.map(([term, text]) => (
+          <div key={term} className="border-b border-[var(--hl-line)] py-4">
+            <dt className="f-title text-lg">{term}</dt>
+            <dd className="mt-1 text-base leading-relaxed">{text}</dd>
+          </div>
+        ))}
+      </dl>
 
-      <p className="rounded-xl border border-pf-teal/30 p-3 text-sm leading-relaxed">
-        If you&apos;re in danger right now, call <b>911</b>. National Domestic Violence Hotline, 24/7:{" "}
-        <b>1-800-799-7233</b>, or text <b>START</b> to <b>88788</b>.
-      </p>
+      <p className="text-base leading-relaxed">{t.aboutDanger}</p>
 
       <button
         onClick={onClose}
-        className="rounded-xl bg-pf-teal px-4 py-3 text-sm font-medium text-pf-cream active:bg-pf-teal-dark"
+        className="f-btn min-h-12 rounded-[var(--hl-radius)] bg-[var(--hl-brand)] px-6 text-[var(--hl-brand-ink)] active:bg-[var(--hl-brand-dk)]"
       >
-        Got it
+        {t.gotIt}
       </button>
     </div>
   );

@@ -31,16 +31,16 @@ const SAMPLE_PLAN: Plan = {
     contacts: ["a-safe-place"],
   },
   steps: [
-    { title: "Call a 24/7 line when you're alone", detail: "Ask about shelter space and waitlists in Alameda County.", when: "now", contacts: ["family-violence-law-center"] },
+    { title: "Call a 24/7 line when you're alone", detail: "Ask about shelter space and waitlists in Alameda County.", when: "now", contacts: ["fvlc"] },
     { title: "Photograph your important documents", detail: "IDs, birth certificates, Social Security cards. Save them somewhere he can't see, like a new email account.", when: "today" },
     { title: "Start a go-bag", detail: "Keep it at a trusted friend's place or at work if home isn't safe.", when: "today" },
     { title: "Check your phone's location sharing", detail: "Look in Maps and Find My, and for apps you didn't install.", when: "this-week" },
-    { title: "Talk to a legal advocate", detail: "Ask about a restraining order and what it means for custody.", when: "this-week", contacts: ["family-violence-law-center"] },
+    { title: "Talk to a legal advocate", detail: "Ask about a restraining order and what it means for custody.", when: "this-week", contacts: ["fvlc"] },
   ],
   goBag: ["Photo ID", "Kids' birth certificates", "Medications", "Phone charger", "Cash", "Spare keys", "Change of clothes", "Kids' comfort items"],
   resources: [
     { id: "a-safe-place", why: "A 24-hour shelter in Oakland; they can tell you about space and waitlists." },
-    { id: "family-violence-law-center", why: "Their 24/7 line helps with safety planning, and they offer free legal help with restraining orders." },
+    { id: "fvlc", why: "Their 24/7 line helps with safety planning, and they offer free legal help with restraining orders." },
   ],
 };
 

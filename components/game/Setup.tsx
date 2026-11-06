@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { codeProblem, createCodes, normalizeCode } from "@/lib/crypto";
 import { PROMO_COINS } from "@/lib/gameProgress";
+import { btnPrimary, btnQuiet, btnSecondary, field, title } from "./styles";
 
 // Opened by redeeming the invite code. Wording is plain enough that she knows what the codes
 // do, and low-key enough to pass a glance. The full explanation lives inside the hidden layer.
@@ -34,23 +35,26 @@ export default function Setup({ onFinish, onCancel }: Props) {
   };
 
   return (
-    <div className="flex w-full flex-col gap-5 rounded-2xl bg-white p-5 shadow-sm">
+    <div className="flex w-full flex-col gap-5">
       {step === "intro" && (
         <>
           <Heading title="Set up your codes" />
-          <p className="text-sm text-pf-ink/80">
-            You&apos;ll make two codes. Both go in <b>Rewards → Redeem a code</b>.
+          <p className="text-base leading-relaxed">
+            You&apos;ll make two codes. Both go in <b>Rewards</b>, under <b>Redeem a code</b>.
           </p>
-          <ul className="flex flex-col gap-3 text-sm">
-            <li className="rounded-xl bg-pf-cream p-3">
-              <b>My code</b> opens your private space.
-            </li>
-            <li className="rounded-xl bg-pf-cream p-3">
-              <b>Clear code</b> erases your private space. The game just shows a normal reward, like any
-              promo code.
-            </li>
-          </ul>
-          <p className="text-sm text-pf-ink/70">
+          <dl className="border-t-2 border-[var(--hl-ink)]">
+            <div className="border-b border-[var(--hl-line)] py-3">
+              <dt className="f-title text-lg">My code</dt>
+              <dd className="mt-0.5 text-base leading-relaxed">opens your private space.</dd>
+            </div>
+            <div className="border-b border-[var(--hl-line)] py-3">
+              <dt className="f-title text-lg">Clear code</dt>
+              <dd className="mt-0.5 text-base leading-relaxed">
+                erases your private space. The game just shows a normal reward, like any promo code.
+              </dd>
+            </div>
+          </dl>
+          <p className="text-sm leading-relaxed text-[var(--hl-muted)]">
             Pick codes you&apos;ll remember and others won&apos;t guess. Don&apos;t write them down where
             they could be found.
           </p>
@@ -93,7 +97,7 @@ export default function Setup({ onFinish, onCancel }: Props) {
       {step === "saving" && (
         <>
           <Heading title="Saving your codes…" />
-          <p className="text-sm text-pf-ink/70">This takes a moment.</p>
+          <p className="text-base text-[var(--hl-muted)]">This takes a moment.</p>
         </>
       )}
 
@@ -102,7 +106,7 @@ export default function Setup({ onFinish, onCancel }: Props) {
       {step === "done" && (
         <>
           <Heading title="You're all set" />
-          <p className="text-sm text-pf-ink/80">
+          <p className="text-base leading-relaxed">
             Now go to <b>Rewards</b> and redeem <b>My code</b> to open your private space. It explains
             everything inside.
           </p>
@@ -113,8 +117,8 @@ export default function Setup({ onFinish, onCancel }: Props) {
   );
 }
 
-function Heading({ title }: { title: string }) {
-  return <h2 className="text-lg font-semibold text-pf-teal">{title}</h2>;
+function Heading({ title: text }: { title: string }) {
+  return <h2 className={title}>{text}</h2>;
 }
 
 function Actions({
@@ -131,20 +135,16 @@ function Actions({
   primaryType?: "button" | "submit";
 }) {
   return (
-    <div className="flex gap-2">
+    <div className="mt-1 flex gap-2">
       {secondary && (
-        <button
-          type="button"
-          onClick={onSecondary}
-          className="flex-1 rounded-xl border border-pf-teal px-4 py-3 text-sm font-medium text-pf-teal"
-        >
+        <button type="button" onClick={onSecondary} className={`${btnSecondary} flex-1`}>
           {secondary}
         </button>
       )}
       <button
         type={primaryType}
         onClick={onPrimary}
-        className="flex-1 rounded-xl bg-pf-teal px-4 py-3 text-sm font-medium text-pf-cream active:bg-pf-teal-dark"
+        className={`${btnPrimary} flex-1`}
       >
         {primary}
       </button>
@@ -167,7 +167,7 @@ function CodeField({
 }) {
   return (
     <div className="flex flex-col gap-1">
-      <label htmlFor={id} className="text-sm font-medium text-pf-ink">
+      <label htmlFor={id} className="f-label text-[var(--hl-muted)]">
         {label}
       </label>
       <input
@@ -179,9 +179,7 @@ function CodeField({
         autoCorrect="off"
         autoCapitalize="characters"
         spellCheck={false}
-        className={`rounded-xl border border-pf-sand bg-white px-3 py-3 text-base text-pf-ink outline-none focus:border-pf-teal ${
-          show ? "" : "[-webkit-text-security:disc]"
-        }`}
+        className={`${field} ${show ? "" : "[-webkit-text-security:disc]"}`}
       />
     </div>
   );
@@ -220,11 +218,11 @@ function ChooseCode({
     <form onSubmit={submit} className="flex flex-col gap-4" autoComplete="off">
       <div className="flex items-baseline justify-between gap-2">
         <Heading title={title} />
-        <button type="button" onClick={onCancel} className="text-sm text-pf-ink/50">
+        <button type="button" onClick={onCancel} className={btnQuiet}>
           Not now
         </button>
       </div>
-      <p className="text-sm text-pf-ink/80">{hint}</p>
+      <p className="text-base leading-relaxed">{hint}</p>
       <CodeField
         id={`${title}-1`}
         label="Code"
@@ -245,11 +243,11 @@ function ChooseCode({
         }}
         show={show}
       />
-      <label className="flex items-center gap-2 text-sm text-pf-ink/70">
-        <input type="checkbox" checked={show} onChange={(e) => setShow(e.target.checked)} />
+      <label className="flex min-h-11 items-center gap-3 text-base">
+        <input type="checkbox" className="size-5" checked={show} onChange={(e) => setShow(e.target.checked)} />
         Show codes
       </label>
-      <p role="alert" className="min-h-5 text-sm text-red-700">
+      <p role="alert" className="min-h-6 text-base font-bold">
         {error ?? externalError}
       </p>
       <Actions primary="Next" primaryType="submit" secondary="Back" onSecondary={onBack} />
@@ -271,7 +269,7 @@ function Practice({ clearCode, onDone }: { clearCode: string; onDone: () => void
   return (
     <div className="flex flex-col gap-4">
       <Heading title="Practice your Clear code" />
-      <p className="text-sm text-pf-ink/80">
+      <p className="text-base leading-relaxed">
         Type your Clear code below. This is only practice, so nothing gets erased.
       </p>
       <form onSubmit={submit} className="flex gap-2" autoComplete="off">
@@ -287,22 +285,22 @@ function Practice({ clearCode, onDone }: { clearCode: string; onDone: () => void
           autoCorrect="off"
           autoCapitalize="characters"
           spellCheck={false}
-          className="min-w-0 flex-1 rounded-xl border border-pf-sand bg-white px-3 py-3 text-base text-pf-ink [-webkit-text-security:disc] outline-none focus:border-pf-teal"
+          className={`${field} flex-1 [-webkit-text-security:disc]`}
         />
-        <button type="submit" className="rounded-xl bg-pf-teal px-4 py-3 text-sm font-medium text-pf-cream">
+        <button type="submit" className={btnPrimary}>
           Redeem
         </button>
       </form>
       {result === "ok" && (
-        <div className="flex flex-col gap-2 rounded-xl bg-pf-cream p-3 text-sm">
-          <p className="font-medium text-pf-teal">Code redeemed! +{PROMO_COINS} coins</p>
-          <p className="text-pf-ink/80">
+        <div className="flex flex-col gap-2 rounded-[var(--hl-radius)] bg-[var(--hl-surface)] p-4">
+          <p className="f-btn text-[var(--hl-brand)]">Code redeemed! +{PROMO_COINS} coins</p>
+          <p className="text-base leading-relaxed">
             That&apos;s all anyone watching would see. For real, it would also erase your private space,
             and you could set up new codes later with the invite code.
           </p>
         </div>
       )}
-      {result === "wrong" && <p className="text-sm text-pf-ink/70">That isn&apos;t your Clear code. Try again.</p>}
+      {result === "wrong" && <p className="text-base font-bold">That isn&apos;t your Clear code. Try again.</p>}
       <Actions primary={result === "ok" ? "Next" : "Skip"} onPrimary={onDone} />
     </div>
   );

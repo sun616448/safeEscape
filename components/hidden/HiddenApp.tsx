@@ -3,36 +3,33 @@
 import { useCallback, useEffect, useState } from "react";
 import { STRINGS } from "@/lib/i18n";
 import { useQuickExit } from "@/lib/quickExit";
+import { freshSituation } from "@/lib/state";
 import type { LogEntry, Plan, SavedState, Situation } from "@/lib/types";
 import type { Session } from "@/lib/vault";
 import Chat from "./Chat";
 import Emergency from "./Emergency";
+import HowItWorks from "./HowItWorks";
 import Log from "./Log";
 import PlanView from "./PlanView";
 import "./hidden.css";
 
 type Tab = "plan" | "talk" | "record";
-type View = Tab | "help";
+type View = Tab | "help" | "about";
 
 type Props = {
-  /** Decrypted state from the passcode unlock (or EMPTY_STATE on first use). */
+  /** Decrypted state from the passcode unlock (an empty state on first use). */
   initialState: SavedState;
   /** Unlocked key, used to encrypt/decrypt log photos and voice notes. */
   session: Session | null;
+  /** Opening screen override: "about" on first visit, "plan" for the dev code. */
+  startOn?: "about" | "plan";
   /** Called on every change so the caller can re-encrypt and save. */
   onChange: (state: SavedState) => void;
   /** Return to the game and lock. Caller must drop decrypted state. */
   onExit: () => void;
 };
 
-function freshSituation(): Situation {
-  const now = new Date().toISOString();
-  return { id: now, createdAt: now, updatedAt: now, turns: [], notes: {}, plan: null, checked: {} };
-}
-
-export const EMPTY_STATE: SavedState = { version: 4, locale: "en", situation: freshSituation(), log: [] };
-
-const icon = "size-6";
+const icon = "size-[22px]";
 const TAB_ICONS: Record<Tab, React.ReactNode> = {
   plan: (
     <svg className={icon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -54,11 +51,11 @@ const TAB_ICONS: Record<Tab, React.ReactNode> = {
   ),
 };
 
-export default function HiddenApp({ initialState, session, onChange, onExit }: Props) {
+export default function HiddenApp({ initialState, session, startOn, onChange, onExit }: Props) {
   const [state, setState] = useState<SavedState>(initialState);
   // Open where she'll most likely want to be: her plan if she has one, otherwise the chat.
-  const [view, setView] = useState<View>(initialState.situation.plan ? "plan" : "talk");
-  const [lastTab, setLastTab] = useState<Tab>(initialState.situation.plan ? "plan" : "talk");
+  const [view, setView] = useState<View>(startOn ?? (initialState.situation.plan ? "plan" : "talk"));
+  const [lastTab, setLastTab] = useState<Tab>(startOn === "plan" || initialState.situation.plan ? "plan" : "talk");
   const [planUnseen, setPlanUnseen] = useState(false);
   const [translating, setTranslating] = useState(false);
   const t = STRINGS[state.locale];
@@ -77,7 +74,7 @@ export default function HiddenApp({ initialState, session, onChange, onExit }: P
   }, [view]);
 
   const go = (v: View) => {
-    if (v !== "help") setLastTab(v);
+    if (v !== "help" && v !== "about") setLastTab(v);
     if (v === "plan") setPlanUnseen(false);
     setView(v);
   };
@@ -141,7 +138,7 @@ export default function HiddenApp({ initialState, session, onChange, onExit }: P
       situation: { ...st.situation, checked: { ...st.situation.checked, [key]: !st.situation.checked[key] } },
     }));
 
-  const pill = "min-h-11 rounded-full px-4 text-sm font-semibold";
+  const btn = "f-btn inline-flex min-h-11 items-center rounded-[var(--hl-radius)] px-4";
   const tabs: { id: Tab; label: string }[] = [
     { id: "plan", label: t.myPlan },
     { id: "talk", label: t.talk },
@@ -149,18 +146,19 @@ export default function HiddenApp({ initialState, session, onChange, onExit }: P
   ];
 
   return (
-    <div className="hl flex min-h-dvh flex-1 flex-col">
-      <header className="sticky top-0 z-20 bg-[var(--hl-bg)]/95 px-4 pb-2 pt-[max(0.75rem,env(safe-area-inset-top))] backdrop-blur">
+    <div className={`hl relative flex min-h-dvh flex-1 flex-col overflow-x-clip`}>
+      <div className="contours" aria-hidden />
+      <header className="sticky top-0 z-20 bg-[var(--hl-bg)] px-4 pb-2 pt-[max(0.75rem,env(safe-area-inset-top))]">
         <div className="mx-auto flex max-w-lg items-center justify-between gap-2">
-          {view === "help" ? (
-            <button onClick={() => go(lastTab)} className={`${pill} -ml-2`}>
+          {view === "help" || view === "about" ? (
+            <button onClick={() => go(lastTab)} className={`${btn} -ml-3`}>
               ← {t.back}
             </button>
           ) : (
             <button
               onClick={switchLanguage}
               disabled={translating}
-              className={`${pill} -ml-2 text-[var(--hl-muted)]`}
+              className={`${btn} f-label -ml-3 !text-xs text-[var(--hl-muted)]`}
               aria-label="Language"
             >
               {translating ? "…" : t.language}
@@ -168,27 +166,31 @@ export default function HiddenApp({ initialState, session, onChange, onExit }: P
           )}
           <div className="flex items-center gap-2">
             {view !== "help" && (
-              <button onClick={() => go("help")} className={`${pill} bg-[var(--hl-danger)] text-[var(--hl-danger-ink)]`}>
+              <button onClick={() => go("help")} className={`${btn} bg-[var(--hl-danger)] text-[var(--hl-danger-ink)]`}>
                 {t.sos}
               </button>
             )}
-            <button onClick={exit} className={`${pill} bg-[var(--hl-ink)] px-5 text-[var(--hl-bg)]`}>
+            <button onClick={exit} className={`${btn} bg-[var(--hl-ink)] px-5 text-[var(--hl-bg)]`}>
               {t.exit}
             </button>
           </div>
         </div>
       </header>
 
-      <main className={`mx-auto flex w-full max-w-lg flex-1 flex-col gap-4 px-4 pt-3 ${
-          view === "talk" ? "pb-[var(--hl-tabbar)]" : "pb-[calc(var(--hl-tabbar)+1.5rem)]"
-        }`}>
-        {view === "help" && <Emergency county={s.county} t={t} locale={state.locale} />}
+      <main
+        className={`relative mx-auto flex w-full max-w-lg flex-1 flex-col gap-4 px-5 pt-3 ${
+          view === "talk" ? "pb-[var(--hl-tabbar)]" : "pb-[calc(var(--hl-tabbar)+2rem)]"
+        }`}
+      >
+        {view === "help" && <Emergency county={s.county} t={t} locale={state.locale} onAbout={() => go("about")} />}
+        {view === "about" && <HowItWorks t={t} onClose={() => go(lastTab)} />}
 
         {view === "plan" &&
           (s.plan ? (
             <PlanView
               plan={s.plan}
               checked={s.checked}
+              county={s.county}
               t={t}
               locale={state.locale}
               onToggle={toggle}
@@ -201,19 +203,25 @@ export default function HiddenApp({ initialState, session, onChange, onExit }: P
               }}
             />
           ) : (
-            <div className="flex flex-1 flex-col items-start justify-center gap-5 pb-16">
-              <p className="max-w-[22ch] text-2xl font-semibold leading-snug text-balance">{t.noPlanYet}</p>
-              <button
-                onClick={() => go("talk")}
-                className="min-h-12 rounded-full bg-[var(--hl-brand)] px-6 font-semibold text-[var(--hl-brand-ink)]"
-              >
+            <div className="flex flex-1 flex-col items-start justify-center gap-6 pb-16">
+              <span className="size-7 rounded-full bg-[var(--hl-accent)] shadow-[0_0_0_4px_var(--hl-bg),0_0_0_6px_var(--hl-brand)]" aria-hidden />
+              <p className="f-title max-w-[18ch] text-[1.75rem] leading-[1.1] text-balance">{t.noPlanYet}</p>
+              <button onClick={() => go("talk")} className={`${btn} min-h-12 bg-[var(--hl-brand)] px-6 text-[var(--hl-brand-ink)]`}>
                 {t.talk} →
               </button>
             </div>
           ))}
 
         {view === "talk" && (
-          <Chat situation={s} t={t} locale={state.locale} onUpdate={setSituation} onViewPlan={() => go("plan")} />
+          <Chat
+            situation={s}
+            t={t}
+            locale={state.locale}
+            onUpdate={setSituation}
+            onViewPlan={() => go("plan")}
+            onClear={() => setSituation({ ...s, turns: [], updatedAt: new Date().toISOString() })}
+            onRestart={() => setSituation(freshSituation())}
+          />
         )}
 
         {view === "record" && (
@@ -223,9 +231,9 @@ export default function HiddenApp({ initialState, session, onChange, onExit }: P
 
       <nav
         aria-label="Sections"
-        className="fixed inset-x-0 bottom-0 z-20 border-t border-[var(--hl-line)] bg-[var(--hl-surface)] pb-[env(safe-area-inset-bottom)]"
+        className="fixed inset-x-0 bottom-0 z-20 border-t-2 border-[var(--hl-ink)] bg-[var(--hl-paper-2)] pb-[env(safe-area-inset-bottom)]"
       >
-        <div className="mx-auto grid h-16 max-w-lg grid-cols-3">
+        <div className="mx-auto grid h-[4.25rem] max-w-lg grid-cols-3">
           {tabs.map(({ id, label }) => {
             const active = view === id;
             return (
@@ -233,14 +241,18 @@ export default function HiddenApp({ initialState, session, onChange, onExit }: P
                 key={id}
                 onClick={() => go(id)}
                 aria-current={active ? "page" : undefined}
-                className={`relative flex flex-col items-center justify-center gap-0.5 text-xs transition-colors ${
-                  active ? "font-semibold text-[var(--hl-brand)]" : "font-medium text-[var(--hl-muted)]"
+                className={`f-label relative flex flex-col items-center justify-center gap-1 transition-colors ${
+                  active ? "text-[var(--hl-ink)]" : "text-[var(--hl-muted)]"
                 }`}
               >
+                {active && <span className="absolute inset-x-[28%] -top-0.5 h-1 bg-[var(--hl-accent)]" aria-hidden />}
                 {TAB_ICONS[id]}
                 {label}
                 {id === "plan" && planUnseen && (
-                  <span className="absolute right-[calc(50%-1.1rem)] top-2.5 size-2.5 rounded-full bg-[var(--hl-accent)]" aria-label={t.planUpdated} />
+                  <span
+                    className="absolute right-[calc(50%-1.25rem)] top-2 size-2.5 rounded-full bg-[var(--hl-accent)] ring-2 ring-[var(--hl-paper-2)]"
+                    aria-label={t.planUpdated}
+                  />
                 )}
               </button>
             );

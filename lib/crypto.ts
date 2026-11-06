@@ -6,7 +6,9 @@
 // - The invite code is public (advocates hand it out). It only opens setup, and only while
 //   no codes exist on this device.
 
+import { emptyState, normalizeState } from "@/lib/state";
 import type { SavedState } from "@/lib/types";
+import { wipeMedia } from "@/lib/vault";
 
 /** Public invite code that opens setup on a fresh install. Case and spaces don't matter. */
 export const INVITE_CODE = "NEWPATH";
@@ -37,8 +39,6 @@ interface ClearBlob {
   salt: string;
   hash: string;
 }
-
-export const EMPTY_STATE: SavedState = { situation: "", plan: null, checklist: {} };
 
 /** Codes are case-insensitive and ignore spaces, like a typical promo code. */
 export function normalizeCode(code: string): string {
@@ -81,6 +81,7 @@ export function hasCodes(): boolean {
 
 /** Deletes everything the hidden layer stores. Game progress is left alone on purpose. */
 export function wipeHiddenData() {
+  wipeMedia(); // encrypted photos and voice notes in IndexedDB
   for (const key of HIDDEN_KEYS) {
     try {
       localStorage.removeItem(key);
@@ -166,7 +167,7 @@ export async function createCodes(myCode: string, clearCode: string): Promise<bo
   const saveSalt = randomBytes(16);
   const clearSalt = randomBytes(16);
   const [key, clearHash] = await Promise.all([deriveKey(myCode, saveSalt), hashCode(clearCode, clearSalt)]);
-  const blob = await seal(key, toB64(saveSalt), EMPTY_STATE);
+  const blob = await seal(key, toB64(saveSalt), emptyState());
   const ok =
     writeJSON(SAVE_KEY, blob) && writeJSON(CLEAR_KEY, { salt: toB64(clearSalt), hash: toB64(clearHash) });
   if (!ok) wipeHiddenData();
@@ -179,7 +180,7 @@ export async function saveState(session: Session, state: SavedState): Promise<bo
 }
 
 export type CodeCheck =
-  | { kind: "unlock"; session: Session }
+  | { kind: "unlock"; session: Session; dev?: true }
   | { kind: "clear" }
   | { kind: "invite" }
   | { kind: "none" };
@@ -193,7 +194,7 @@ async function openSave(save: SaveBlob | null, code: string): Promise<Session | 
   try {
     const key = await deriveKey(code, fromB64(save.salt));
     const plain = await crypto.subtle.decrypt({ name: "AES-GCM", iv: fromB64(save.iv) }, key, fromB64(save.data));
-    return { key, salt: save.salt, state: { ...EMPTY_STATE, ...JSON.parse(dec.decode(plain)) } };
+    return { key, salt: save.salt, state: normalizeState(JSON.parse(dec.decode(plain))) };
   } catch {
     return null; // Wrong code (or a corrupted save).
   }
@@ -206,7 +207,7 @@ export async function checkCode(code: string): Promise<CodeCheck> {
     if (!session && (await createCodes(DEV_CODE, DEV_CLEAR_CODE))) {
       session = await openSave(readJSON<SaveBlob>(SAVE_KEY), code);
     }
-    if (session) return { kind: "unlock", session };
+    if (session) return { kind: "unlock", session, dev: true };
   }
 
   const save = readJSON<SaveBlob>(SAVE_KEY);

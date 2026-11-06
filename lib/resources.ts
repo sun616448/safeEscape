@@ -15,18 +15,11 @@ export function resourcesFor(county?: County): Resource[] {
   return RESOURCES.filter((r) => r.counties.includes("all") || r.counties.includes(county));
 }
 
-const EMERGENCY_NATIONAL = ["national-dv-hotline", "988-lifeline"];
-
-/** Instant, no-AI emergency resources: her county's 24/7 lines first, then the national DV hotline and 988. */
+/** Instant, no-AI emergency resources: her county's 24-hour lines first, then the National DV Hotline. */
 export function emergencyResources(county?: County): Resource[] {
   const local = county
-    ? RESOURCES.filter(
-        (r) =>
-          r.counties.includes(county) &&
-          (r.type === "hotline" || r.type === "shelter") &&
-          /24/.test(r.hours ?? "")
-      )
+    ? RESOURCES.filter((r) => r.counties.includes(county) && r.is24h && !r.counties.includes("all"))
     : [];
-  const national = EMERGENCY_NATIONAL.map(getResource).filter((r): r is Resource => !!r);
-  return [...local, ...national];
+  const national = getResource("ndvh");
+  return national ? [...local, national] : local;
 }

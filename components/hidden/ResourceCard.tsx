@@ -29,27 +29,24 @@ export default function ResourceCard({
 }) {
   const blurb = locale === "es" ? r.blurbEs : r.blurb;
   const sms = r.text ? smsLink(r.text) : null;
+  const b = "f-btn inline-flex min-h-11 items-center rounded-[var(--hl-radius)] px-4";
+  // A row in a list, separated by hairlines: no card, no shadow (see DESIGN.md).
   return (
-    <li className="rounded-2xl bg-[var(--hl-surface)] p-4">
+    <li className="border-b border-[var(--hl-line)] py-4 last:border-b-0">
       <div className="flex items-baseline justify-between gap-3">
-        <h3 className="font-semibold leading-snug">{r.name}</h3>
-        {r.hours === "24/7" && <span className="shrink-0 text-xs font-medium text-[var(--hl-brand)]">24/7</span>}
+        <h3 className="f-title text-lg leading-tight">{r.name}</h3>
+        {r.is24h && <span className="f-label shrink-0 text-[var(--hl-zone)]">24/7</span>}
       </div>
-      <p className="mt-1 text-[15px] leading-snug text-[var(--hl-muted)]">{why || blurb}</p>
-      <div className="mt-3 flex flex-wrap gap-2">
+      <p className="mt-1 text-[15px] leading-relaxed text-[var(--hl-muted)]">{why || blurb}</p>
+      {r.flag && <p className="mt-1 text-xs font-bold text-[var(--hl-muted)]">{t.confirmByPhone}</p>}
+      <div className="mt-3 flex flex-wrap items-center gap-2">
         {r.phone && (
-          <a
-            href={`tel:${digits(r.phone)}`}
-            className="inline-flex min-h-11 items-center rounded-full bg-[var(--hl-brand)] px-4 text-sm font-semibold text-[var(--hl-brand-ink)]"
-          >
+          <a href={`tel:${digits(r.phone)}`} className={`${b} bg-[var(--hl-brand)] text-[var(--hl-brand-ink)]`}>
             {t.call}
           </a>
         )}
         {sms && (
-          <a
-            href={sms}
-            className="inline-flex min-h-11 items-center rounded-full border border-[var(--hl-brand)] px-4 text-sm font-semibold text-[var(--hl-brand)]"
-          >
+          <a href={sms} className={`${b} border-2 border-[var(--hl-brand)] text-[var(--hl-brand)]`}>
             {r.text?.replace(/\s*\(.*\)\s*$/, "")}
           </a>
         )}
