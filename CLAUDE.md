@@ -81,7 +81,13 @@ Both modes include matched Bay Area resources (from the curated list only) and a
   agencies/shelters, legal aid orgs. Verify every number/URL before demo.
 
 ## Stack
-- Next.js (App Router) + TypeScript, deployed on Vercel.
+@AGENTS.md
+
+- Next.js 16 (App Router) + TypeScript + Tailwind v4, deployed on Vercel.
+  Read the bundled docs in `node_modules/next/dist/docs/` before using Next.js APIs.
+- PWA pieces already in place: `app/manifest.ts`, `app/apple-icon.png`, `public/icon*.{svg,png}`,
+  `public/sw.js` (never caches `/api`), registered by `components/RegisterServiceWorker.tsx`
+  in production only. Shared types live in `lib/types.ts`.
 - PWA: `manifest.json` named "Path Finder" with a neutral maze icon, mobile-first layout,
   installable to home screen.
 - Styling: whatever is quickest (Tailwind is fine).
