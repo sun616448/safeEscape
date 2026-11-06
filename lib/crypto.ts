@@ -180,7 +180,7 @@ export async function saveState(session: Session, state: SavedState): Promise<bo
 }
 
 export type CodeCheck =
-  | { kind: "unlock"; session: Session; dev?: true }
+  | { kind: "unlock"; session: Session; dev?: { created: boolean; myCode: string; clearCode: string } }
   | { kind: "clear" }
   | { kind: "invite" }
   | { kind: "none" };
@@ -204,10 +204,13 @@ export async function checkCode(code: string): Promise<CodeCheck> {
   if (process.env.NODE_ENV === "development" && normalizeCode(code) === DEV_CODE) {
     // Reuses the dev save if there is one; otherwise replaces any codes on this browser.
     let session = await openSave(readJSON<SaveBlob>(SAVE_KEY), code);
+    const created = !session;
     if (!session && (await createCodes(DEV_CODE, DEV_CLEAR_CODE))) {
       session = await openSave(readJSON<SaveBlob>(SAVE_KEY), code);
     }
-    if (session) return { kind: "unlock", session, dev: true };
+    if (session) {
+      return { kind: "unlock", session, dev: { created, myCode: DEV_CODE, clearCode: DEV_CLEAR_CODE } };
+    }
   }
 
   const save = readJSON<SaveBlob>(SAVE_KEY);

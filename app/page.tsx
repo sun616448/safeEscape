@@ -13,8 +13,10 @@ export default function Home() {
   const [layer, setLayer] = useState<Layer>("game");
   // Decrypted data and key live only here, and are dropped on exit.
   const [session, setSession] = useState<Session | null>(null);
-  // First visit opens on "How this works"; the dev code goes straight to the plan.
+  // First visit opens on "How this works". The dev code shows it the first time it sets up
+  // its save, and goes straight to the plan after that.
   const [startOn, setStartOn] = useState<"about" | "plan" | undefined>();
+  const [devCodes, setDevCodes] = useState<{ myCode: string; clearCode: string } | undefined>();
   const sessionRef = useRef<Session | null>(null);
 
   const handleCode = async (code: string): Promise<CodeResult> => {
@@ -25,7 +27,12 @@ export default function Home() {
       case "unlock":
         sessionRef.current = result.session;
         setSession(result.session);
-        setStartOn(result.dev ? "plan" : isFreshState(result.session.state) ? "about" : undefined);
+        if (result.dev) {
+          setDevCodes(result.dev);
+          setStartOn(result.dev.created ? "about" : "plan");
+        } else {
+          setStartOn(isFreshState(result.session.state) ? "about" : undefined);
+        }
         setLayer("hidden");
         return "unlock";
       case "clear":
@@ -54,6 +61,7 @@ export default function Home() {
         initialState={session.state}
         session={session}
         startOn={startOn}
+        devCodes={devCodes}
         onChange={persist}
         onExit={exit}
       />
