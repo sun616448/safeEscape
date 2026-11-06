@@ -21,12 +21,12 @@ Mobile-first web app, installable as a PWA ("Add to Home Screen"). Must also wor
 Help a survivor turn "I need to get out" into a concrete, personalized, safe next-steps plan with vetted local resources, without leaving a trace that she's doing so.
 
 Success (both count equally):
-- **Demo:** judges see the maze → player code → hidden layer → real Claude-generated plan → instant quick exit, live on a phone.
+- **Demo:** judges see the maze → invite code → setup → My code → hidden layer → real Claude-generated plan → instant quick exit, live on a phone.
 - **Real-world credibility:** a survivor or DV advocate could use the hidden layer and trust its tone, safety behavior, and resources.
 
 ## Positioning
 
-A genuinely playable maze game ("Path Finder") is the cover; the real tool lives behind a player code in the game's Profile screen. Natural-language input → Claude → a triaged plan (immediate danger vs. planning ahead) that only cites hand-vetted Bay Area resources, saved encrypted on-device, with a panic code that silently wipes everything.
+A genuinely playable maze game ("Path Finder") is the cover; the real tool lives behind "My code", redeemed like a promo code in the game's Rewards screen. Natural-language input → Claude → a triaged plan (immediate danger vs. planning ahead) that only cites hand-vetted Bay Area resources, saved encrypted on-device, with a "Clear code" that silently wipes everything.
 
 ## Operating Context
 
@@ -37,7 +37,7 @@ A genuinely playable maze game ("Path Finder") is the cover; the real tool lives
 
 ## Capabilities and Constraints
 
-- **Layer 1 (public):** an original maze game, Profile screen with a "Player code" field, first-launch profile setup that creates a player code (real passcode) and backup code (panic code).
+- **Layer 1 (public):** an original maze game, a Rewards screen with a "Redeem a code" promo field, a public invite code (from advocates) that opens setup, where she creates "My code" (real passcode) and "Clear code" (panic code) and practices the Clear code safely. The Clear code looks like a successful free promo reward (never an error, never money). Plain language at setup and inside the hidden layer, so she always knows what the app really is.
 - **Layer 2 (hidden):** free-text situation input, optional county/kids/pets/danger fields, Claude-generated structured plan, go-bag checklist, matched resources, encrypted save.
 - **Quick exit:** persistent exit button, Esc key, phone shake. Returns to the maze instantly and clears decrypted data.
 - **Stealth:** single route, no URLs for hidden screens, public name/icon/metadata reveal nothing, no analytics, server never logs user text.

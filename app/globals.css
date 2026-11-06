@@ -12,6 +12,16 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Path Finder palette (matches public/icon.svg). */
+@theme {
+  --color-pf-teal: #2f6f6a;
+  --color-pf-teal-dark: #24524e;
+  --color-pf-cream: #f4efe4;
+  --color-pf-sand: #e8dfcc;
+  --color-pf-gold: #f2b84b;
+  --color-pf-ink: #1f3836;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

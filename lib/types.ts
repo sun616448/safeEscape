@@ -4,6 +4,16 @@
 /** Which layer is on screen. Always client state, never a URL. */
 export type Layer = "game" | "hidden";
 
+/**
+ * Outcome of a code typed into the game's "Redeem a code" field.
+ * - "unlock":  My code (real passcode); the caller has switched to the hidden layer.
+ * - "reward":  Clear code (panic); the caller has wiped saved data, and the game shows a
+ *              normal "Code redeemed" reward so it looks like the code worked.
+ * - "setup":   the public invite code on a device with no codes yet; the game opens setup.
+ * - "expired": anything else; shown as an ordinary expired promo code.
+ */
+export type CodeResult = "unlock" | "reward" | "setup" | "expired";
+
 export type County =
   | "san-francisco"
   | "alameda"
